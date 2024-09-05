@@ -40,7 +40,7 @@ header .forest__nav {
 header .forest__nav .forest__nav__list {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 29px;
 }
 header .forest__nav .forest__nav__list .forest__nav__item .forest__nav__item__link {
   color: #fff;
