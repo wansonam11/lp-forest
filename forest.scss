@@ -36,14 +36,13 @@ header {
 
   .forest__nav {
     border: 2px solid red;
-    width: 50%;
     display: flex;
     align-items: center;
 
     .forest__nav__list {
       display: flex;
       align-items: center;
-      margin-right: 40px;
+      gap: 30px;
 
       .forest__nav__item {
         .forest__nav__item__link {
