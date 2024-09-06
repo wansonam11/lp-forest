@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="forest.css" />
   <script def src="forest.js"></script>
+  <script src="https://kit.fontawesome.com/b4c3ff631b.js" crossorigin="anonymous"></script>
   <title>Forest Page</title>
 </head>
 <header>
   <div class="logo">
-    <img class="logo_img" src="logo.png" alt="Logo Image">
+    <img class="logo__img" src="logo.png" alt="Logo Image">
   </div>
   <div class="forest__nav">
     <ul class="forest__nav__list">
@@ -33,8 +34,12 @@
         <a class="forest__nav__item__link" href="#">お問い合わせ</a>
       </li>
     </ul>
+    <!-- <div class="forest__nav__toggle" id="forest__nav__toggle">
+      <img class="forest__nav__toggle__ham" alt="hamburger" src="ham.png" />
+    </div> -->
   </div>
 </header>
+
 <body>
   <!-- main -->
   <section class="forest__main">
@@ -46,7 +51,7 @@
   <section class="forest__what-is">
     <div class="forest__container">
       <div class="forest__what-is__text">
-        <h1>What is</h1>
+        <span>What is</span>
         <h2>未来型設計集団<br>
           VISION ARCHITECTURE
         </h2>
@@ -57,107 +62,113 @@
         </p>
       </div>
       <div class="forest__what-is__image">
-        <img class="forest__what-is__image" src="" alt="whatIs_Image1" />
-        <img class="forest__what-is__image" src="" alt="whatIs_Image2" />
+        <img class="forest__what-is__image__img" src="what-is.png" alt="whatIs_Image1" />
       </div>
     </div>
   </section>
-</div>
+  </div>
   <!-- Features -->
-  <!-- <section class="features">
-    <div class="features__header">
-      <h1>Features</h1>
+  <section class="forest__features">
+    <div class="forest__features__header">
+      <span>Features</span>
       <h2>VISION ARCHITECTUREの特徴</b>
     </div>
-    <div class="features__container">
-      <div class="features__contents">
-        <img class="features__contents__image" src="" alt="feature_Image1" />
-        <div class="features__contents__text">
-          <div class="features__text__inner">
-            <div class="feature__text__inner__number">
+    <div class="forest__features__container">
+      <div class="forest__features__contents">
+        <img class="forest__features__contents__image" src="page-foresthome-features-img01_pc.jpg"
+          alt="feature_Image1" />
+        <div class="forest__features__contents__text">
+          <div class="forest__features__text__inner">
+            <div class="forest__features__text__inner__number">
               1
             </div>
-            <div class="feature__text__inner__title">
+            <div class="forest__features__text__inner__title">
               “設計しない”ということも<br>提案する設計。
             </div>
-            <div class="feature__text__inner__contents">
+            <div class="forest__features__text__inner__contents">
               <p>
                 店舗や住宅などの空間は人生にとって主役ではなく、描いたビジョンの達成の <br>
                 手段であること。<br>
-                <br />
+                <br>
               </p>
               <p>
-                私たちはこの想いを前提に活動しています。ビジョンのためにどんな設計であ<br>
-                るべきかという提案を行っています。このため店舗の経営フェーズなどから、<br>
+                私たちはこの想いを前提に活動しています。ビジョンのためにどんな設計であるべきかという提案を行っています。このため店舗の経営フェーズなどから、<br>
                 今は設計を行わない方が良い　という提案を行うことがあります。<br>
-                設計する事ありきとせず、ビジョンを叶える手段の１つとして空間設計をご提<br>
-                供しています。
+                設計する事ありきとせず、ビジョンを叶える手段の１つとして空間設計をご提供しています。
               </p>
             </div>
           </div>
-          <div class="features__text__inner__image">
-            <img src="" alt="feature_Image1_bottom">
+          <div class="forest__features__text__inner__image">
+            <img src="" alt="forest__features_Image1_bottom">
           </div>
           <div>
           </div>
         </div>
       </div>
-      <div class="contents2">
-        <img class="features" src="" alt="feature_Image２" />
-        <div class="features__text">
-          <div class="features__text__inner">
-            <div class="feature__text__number">
+    </div>
+    <div class="forest__features__container">
+      <div class="forest__features__contents">
+        <img class="forest__features__contents__image" src="page-foresthome-features-img01_pc.jpg"
+          alt="feature_Image1" />
+        <div class="forest__features__contents__text">
+          <div class="forest__features__text__inner">
+            <div class="forest__features__text__inner__number">
               2
             </div>
-            <div class="feature__text__title">
+            <div class="forest__features__text__inner__title">
               美しく、価値ある空間をつくる。
             </div>
-            <div class="feature__text__content">
+            <div class="forest__features__text__inner__contents">
               <p>
-                描いたビジョンを理解し、美しいデザインで心地よいことはもちろん、行動経済学を交えた設計が確かな価値を生み、店舗や住宅を通して紡ぎたい将来のビジョンへ近づくことを後押しします。
+                描いたビジョンを理解し、美しいデザインで心地よいことはもちろん、行動経済学を交えた設計が確かな価値を生み、店舗や住宅を通して紡ぎたい将来のビジョンへ近づくことを後押しします。<br>
               </p>
               <p>
-                これらをご評価いただき、私たちは店舗やオフィスのデザインコンサルタント、また全国の建築会社に向けた設計コンサルタントのご用命頂いております。
-              </p>
-              <p>
-                情緒的な美しさもありながら、目標となるビジョンへの本質的な価値も併せ持つ。そんな空間をご提案します。
+                これらをご評価いただき、私たちは店舗やオフィスのデザインコンサルタント、また全国の建築会社に向けた設計コンサルタントのご用命頂いております。<br>
+                情緒的な美しさもありながら、目標となるビジョンへの本質的な価値も併せ持つ。そんな空間をご提案します。<br>
               </p>
             </div>
           </div>
-          <div class="features__text__image">
-            <img src="" alt="feature_Image2_bottom">
+          <div class="forest__features__text__inner__image">
+            <img src="" alt="forest__features_Image1_bottom">
+          </div>
+          <div>
           </div>
         </div>
       </div>
-      <div class="contents3">
-        <img class="features" src="" alt="feature_Image3" />
-        <div class="features__text">
-          <div class="features__text__inner">
-            <div class="feature__text__number">
+    </div>
+    <div class="forest__features__container">
+      <div class="forest__features__contents">
+        <img class="forest__features__contents__image" src="page-foresthome-features-img01_pc.jpg"
+          alt="feature_Image1" />
+        <div class="forest__features__contents__text">
+          <div class="forest__features__text__inner">
+            <div class="forest__features__text__inner__number">
               3
             </div>
-            <div class="feature__text__title">
+            <div class="forest__features__text__inner__title">
               細かなエッセンスまで高い完成度を。
             </div>
-            <div class="feature__text__content">
+            <div class="forest__features__text__inner__contents">
               <p>
-                これまでお話した設計を、高品質な仕上がりで、コストをかけすぎず形にするには施工についての理解がかかせません。
+                これまでお話した設計を、高品質な仕上がりで、コストをかけすぎず形にするには施工についての理解がかかせません。<br>
               </p>
               <p>
-                私たちは、建築における幅広い経験と知見を持ったスタッフが集まったチームであり、だからこそ、あらゆる理想の空間を創造でき、コストのバランスも踏まえた設計が提案できるのです。
+                私たちは、建築における幅広い経験と知見を持ったスタッフが集まったチームであり、だからこそ、あらゆる理想の空間を創造でき、コストのバランスも踏まえた設計が提案できるのです。<br>
               </p>
               <p>
                 そして、現場での調整対応が可能な余白のある設計で、柔軟な対応が可能となり、空間の仕上がりがより高品質なものとなります。
               </p>
             </div>
           </div>
-          <div class="features__text__image">
-            <img src="" alt="feature_Image3_bottom">
+          <div class="forest__features__text__inner__image">
+            <img src="" alt="forest__features_Image1_bottom">
+          </div>
+          <div>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- Business Introduction -->
   <!-- <section class="introduction">
     <div class="introduction__header">
@@ -167,7 +178,7 @@
     <div class="introduction__container">
       <div class="contents1">
         <img class="features" src="" alt="feature_Image1" />
-        <div class="features__text">
+        <div class="forest__features__text">
           <div class="feature__text__title">
             1. 住宅設計
           </div>
@@ -186,7 +197,7 @@
       </div>
       <div class="contents2">
         <img class="features" src="" alt="feature_Image1" />
-        <div class="features__text">
+        <div class="forest__features__text">
           <div class="feature__text__title">
             2. 店舗設計
           </div>
@@ -205,7 +216,7 @@
       </div>
       <div class="feature__contents reverse">
         <img class="features" src="" alt="feature_Image1" />
-        <div class="features__text">
+        <div class="forest__features__text">
           <div class="feature__text__title">
             3.　オフィス設計
           </div>
@@ -223,6 +234,7 @@
         </div>
       </div>
     </div>
+
   </section> -->
   <!-- Works -->
   <!-- <section class="works">

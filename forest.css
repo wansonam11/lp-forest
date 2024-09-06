@@ -18,39 +18,39 @@ header {
   width: 100%;
   z-index: 1;
   position: fixed;
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
+  border: 1px solid red;
 }
 header .logo {
-  z-index: 2;
-  border: 2px solid red;
+  border: 1px solid red;
+  margin-left: 100px;
 }
-header .logo .logo_img {
-  width: 210px;
-  height: 59px;
+header .logo__img {
+  width: 70%;
   margin-top: 10px;
   margin-left: 50px;
 }
 header .forest__nav {
-  border: 2px solid red;
   display: flex;
   align-items: center;
 }
-header .forest__nav .forest__nav__list {
+header .forest__nav__list {
   display: flex;
   align-items: center;
   gap: 29px;
 }
-header .forest__nav .forest__nav__list .forest__nav__item .forest__nav__item__link {
+header .forest__nav__item__link {
   color: #fff;
   margin-right: 80px;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+header .forest__nav__item__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body {
-  background-color: rgb(70, 135, 170);
-}
 body .forest__main {
   width: 100%;
   height: 100vh;
@@ -59,12 +59,12 @@ body .forest__main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body .forest__main #forest__main__scroll {
+body .forest__main__scroll {
   display: flex;
   justify-content: center;
   color: #fff;
   width: 10px;
-  height: 130px;
+  height: 150px;
   border: 1px solid yellow;
   position: absolute;
   right: 7%;
@@ -72,13 +72,92 @@ body .forest__main #forest__main__scroll {
 }
 body .forest__what-is {
   width: 100%;
-  height: 100vh;
-  border: 1px solid blue;
-  z-index: 6;
-  top: 20%;
-  background-image: url(pic.jpg);
+  background-image: url(vision-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+body .forest__what-is .forest__container {
+  max-width: 1200px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  border: 1px solid aqua;
+  margin: auto;
+}
+body .forest__what-is__text {
+  width: 50%;
+  border: 1px solid white;
+  color: #fff;
+}
+body .forest__what-is__text::before {
+  content: "";
+  display: block;
+  padding-left: 10px;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+body .forest__what-is__text span {
+  color: white;
+  margin-left: 70px;
+}
+body .forest__what-is__text h2 {
+  color: #fff;
+  margin-top: 50px;
+  font: bold 30px/1.3 "";
+}
+body .forest__what-is__text p {
+  margin-top: 50px;
+  font: normal 15px/2 "";
+}
+body .forest__what-is__image {
+  width: 771px;
+}
+body .forest__what-is__image__img {
+  width: 100%;
+  border: 1px solid white;
+  margin: 44px 0px 44px 70px;
+}
+body .forest__features {
+  width: 100%;
+  background-image: url(features-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+body .forest__features::before {
+  content: "";
+  display: block;
+  padding-left: 10px;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+body .forest__features span {
+  color: white;
+  margin-left: 70px;
+}
+body .forest__features h2 {
+  color: #fff;
+  margin-top: 50px;
+  font: bold 30px/1.3 "";
+}
+body .forest__features__header {
+  border: 1px solid yellow;
+}
+body .forest__features__container {
+  display: flex;
+  border: 1px solid pink;
+}
+body .forest__features__contents {
+  border: 1px solid pink;
 }
 
 footer {
