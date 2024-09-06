@@ -20,10 +20,8 @@ header {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
 }
 header .logo {
-  border: 1px solid red;
   margin-left: 100px;
 }
 header .logo__img {
