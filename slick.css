@@ -1,0 +1,26 @@
+.post-slider {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  border: 1px solid aqua;
+}
+.post-slider .post-wrapper {
+  width: 84%;
+  height: 350px;
+  margin: 0px auto;
+  overflow: hidden;
+  border: 1px dashed red;
+}
+.post-slider .post-wrapper .post {
+  width: 100x;
+  height: 350px;
+  display: inline-block;
+  margin: 0px 10px;
+  background: gray;
+  margin-left: 20px;
+}
+.post-slider .post-wrapper .post img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=slick.css.map */

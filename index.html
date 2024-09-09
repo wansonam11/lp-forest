@@ -7,11 +7,16 @@
   <link rel="stylesheet" href="forest.css" />
   <script def src="forest.js"></script>
   <script src="https://kit.fontawesome.com/b4c3ff631b.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  　 </script>
   <title>Forest Page</title>
 </head>
 <header>
   <div class="logo">
-    <img class="logo__img" src="logo.png" alt="Logo Image">
+    <img class="logo__img" src="img/logo.png" alt="Logo Image">
   </div>
   <div class="forest__nav">
     <ul class="forest__nav__list">
@@ -62,108 +67,125 @@
         </p>
       </div>
       <div class="forest__what-is__image">
-        <img class="forest__what-is__image__img" src="what-is.png" alt="whatIs_Image1" />
+        <img class="forest__what-is__image__img" src="img/what-is.png" alt="whatIs_Image1" />
       </div>
     </div>
   </section>
   </div>
   <!-- Features -->
   <section class="forest__features">
-    <div class="forest__features__header">
-      <span>Features</span>
-      <h2>VISION ARCHITECTUREの特徴</b>
-    </div>
-    <div class="forest__features__container">
-      <div class="forest__features__contents">
-        <img class="forest__features__contents__image" src="page-foresthome-features-img01_pc.jpg"
-          alt="feature_Image1" />
-        <div class="forest__features__contents__text">
-          <div class="forest__features__text__inner">
-            <div class="forest__features__text__inner__number">
-              1
+    <div class="forest__features__box">
+      <div class="forest__features__header">
+        <span>Features</span>
+        <h2>VISION ARCHITECTUREの特徴</b>
+      </div>
+
+      <div class="forest__features__wrap">
+        <div class="forest__features__container">
+          <div class="forest__features__contents">
+            <div class="forest__features__contents__img">
+              <img class="forest__features__contents__image" src="img/page-foresthome-features-img01_pc.jpg"
+                alt="feature_Image1" />
             </div>
-            <div class="forest__features__text__inner__title">
-              “設計しない”ということも<br>提案する設計。
+            <div class="forest__features__contents__text">
+              <div class="forest__features__text__inner">
+                <div class="forest__features__text__inner__header">
+                  <span>
+                    1
+                  </span>
+                  <div class="forest__features__text__inner__title">
+                    “設計しない”ということも<br>提案する設計。
+                  </div>
+                </div>
+                <div class="forest__features__text__inner__contents">
+                  <p>
+                    店舗や住宅などの空間は人生にとって主役ではなく、描いたビジョンの達成の <br>
+                    手段であること。<br>
+                    <br>
+                  </p>
+                  <p>
+                    私たちはこの想いを前提に活動しています。ビジョンのためにどんな設計であるべきかという提案を行っています。このため店舗の経営フェーズなどから、<br>
+                    今は設計を行わない方が良い　という提案を行うことがあります。<br>
+                    設計する事ありきとせず、ビジョンを叶える手段の１つとして空間設計をご提供しています。
+                  </p>
+                </div>
+                <div class="forest__features__text__inner__image">
+                  <img src="img/pic.jpg" alt="forest__features_Image1_bottom">
+                </div>
+              </div>
+              <div>
+              </div>
             </div>
-            <div class="forest__features__text__inner__contents">
-              <p>
-                店舗や住宅などの空間は人生にとって主役ではなく、描いたビジョンの達成の <br>
-                手段であること。<br>
-                <br>
-              </p>
-              <p>
-                私たちはこの想いを前提に活動しています。ビジョンのためにどんな設計であるべきかという提案を行っています。このため店舗の経営フェーズなどから、<br>
-                今は設計を行わない方が良い　という提案を行うことがあります。<br>
-                設計する事ありきとせず、ビジョンを叶える手段の１つとして空間設計をご提供しています。
-              </p>
-            </div>
-          </div>
-          <div class="forest__features__text__inner__image">
-            <img src="" alt="forest__features_Image1_bottom">
-          </div>
-          <div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="forest__features__container">
-      <div class="forest__features__contents">
-        <img class="forest__features__contents__image" src="page-foresthome-features-img01_pc.jpg"
-          alt="feature_Image1" />
-        <div class="forest__features__contents__text">
-          <div class="forest__features__text__inner">
-            <div class="forest__features__text__inner__number">
-              2
+        <div class="forest__features__container">
+          <div class="forest__features__contents">
+            <div class="forest__features__contents__img">
+              <img class="forest__features__contents__image" src="img/page-foresthome-features-img01_pc.jpg"
+                alt="feature_Image1" />
             </div>
-            <div class="forest__features__text__inner__title">
-              美しく、価値ある空間をつくる。
+            <div class="forest__features__contents__text">
+              <div class="forest__features__text__inner">
+                <div class="forest__features__text__inner__header">
+                  <span>
+                    2
+                  </span>
+                  <div class="forest__features__text__inner__title">
+                    美しく、価値ある空間をつくる。
+                  </div>
+                </div>
+                <div class="forest__features__text__inner__contents">
+                  <p>
+                    描いたビジョンを理解し、美しいデザインで心地よいことはもちろん、行動経済学を交えた設計が確かな価値を生み、店舗や住宅を通して紡ぎたい将来のビジョンへ近づくことを後押しします。<br>
+                  </p>
+                  <p>
+                    これらをご評価いただき、私たちは店舗やオフィスのデザインコンサルタント、また全国の建築会社に向けた設計コンサルタントのご用命頂いております。<br>
+                    情緒的な美しさもありながら、目標となるビジョンへの本質的な価値も併せ持つ。そんな空間をご提案します。<br>
+                  </p>
+                </div>
+                <div class="forest__features__text__inner__image">
+                  <img src="img/pic.jpg" alt="forest__features_Image1_bottom">
+                </div>
+              </div>
+              <div>
+              </div>
             </div>
-            <div class="forest__features__text__inner__contents">
-              <p>
-                描いたビジョンを理解し、美しいデザインで心地よいことはもちろん、行動経済学を交えた設計が確かな価値を生み、店舗や住宅を通して紡ぎたい将来のビジョンへ近づくことを後押しします。<br>
-              </p>
-              <p>
-                これらをご評価いただき、私たちは店舗やオフィスのデザインコンサルタント、また全国の建築会社に向けた設計コンサルタントのご用命頂いております。<br>
-                情緒的な美しさもありながら、目標となるビジョンへの本質的な価値も併せ持つ。そんな空間をご提案します。<br>
-              </p>
-            </div>
-          </div>
-          <div class="forest__features__text__inner__image">
-            <img src="" alt="forest__features_Image1_bottom">
-          </div>
-          <div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="forest__features__container">
-      <div class="forest__features__contents">
-        <img class="forest__features__contents__image" src="page-foresthome-features-img01_pc.jpg"
-          alt="feature_Image1" />
-        <div class="forest__features__contents__text">
-          <div class="forest__features__text__inner">
-            <div class="forest__features__text__inner__number">
-              3
+        <div class="forest__features__container">
+          <div class="forest__features__contents">
+            <div class="forest__features__contents__img">
+              <img class="forest__features__contents__image" src="img/page-foresthome-features-img01_pc.jpg"
+                alt="feature_Image1" />
             </div>
-            <div class="forest__features__text__inner__title">
-              細かなエッセンスまで高い完成度を。
+            <div class="forest__features__contents__text">
+              <div class="forest__features__text__inner">
+                <div class="forest__features__text__inner__header">
+                  <span>
+                    3
+                  </span>
+                  <div class="forest__features__text__inner__title">
+                    細かなエッセンスまで高い完成度を。
+                  </div>
+                </div>
+                <div class="forest__features__text__inner__contents">
+                  <p>
+                    これまでお話した設計を、高品質な仕上がりで、コストをかけすぎず形にするには施工についての理解がかかせません。<br>
+                  </p>
+                  <p>
+                    私たちは、建築における幅広い経験と知見を持ったスタッフが集まったチームであり、だからこそ、あらゆる理想の空間を創造でき、コストのバランスも踏まえた設計が提案できるのです。<br>
+                  </p>
+                  <p>
+                    そして、現場での調整対応が可能な余白のある設計で、柔軟な対応が可能となり、空間の仕上がりがより高品質なものとなります。
+                  </p>
+                </div>
+                <div class="forest__features__text__inner__image">
+                  <img src="img/pic.jpg" alt="forest__features_Image1_bottom">
+                </div>
+              </div>
+              <div>
+              </div>
             </div>
-            <div class="forest__features__text__inner__contents">
-              <p>
-                これまでお話した設計を、高品質な仕上がりで、コストをかけすぎず形にするには施工についての理解がかかせません。<br>
-              </p>
-              <p>
-                私たちは、建築における幅広い経験と知見を持ったスタッフが集まったチームであり、だからこそ、あらゆる理想の空間を創造でき、コストのバランスも踏まえた設計が提案できるのです。<br>
-              </p>
-              <p>
-                そして、現場での調整対応が可能な余白のある設計で、柔軟な対応が可能となり、空間の仕上がりがより高品質なものとなります。
-              </p>
-            </div>
-          </div>
-          <div class="forest__features__text__inner__image">
-            <img src="" alt="forest__features_Image1_bottom">
-          </div>
-          <div>
           </div>
         </div>
       </div>
@@ -237,116 +259,141 @@
 
   </section> -->
   <!-- Works -->
-  <!-- <section class="works">
-    <div class="works__header">
-      <h1>Works</h1>
-      <h2>施工実績</b>
+  　<section class="forest__works">
+    <div class="forest__container">
+      <div class="forest__features__header">
+        <span>Works</span>
+        <h2>施工実績</h2>
+      </div>
     </div>
-    <div class="images">
-      <img src="" alt="works_Image1" />
-      <img src="" alt="works_Image2" />
-      <img src="" alt="works_Image3" />
-      <img src="" alt="works_Image4" />
-      <img src="" alt="works_Image5" />
-      <img src="" alt="works_Image6" />
+    <div class="section-works__slider-wrap">
+      <div class="section-works__slider">
+        <div class="section-works__slider__item">
+          <div class="section-works__slider__item__img">
+            <img src="img/pic.jpg" alt="POST 01">
+          </div>
+          </a>
+        </div>
+        <div class="section-works__slider__item">
+          <div class="section-works__slider__item__img">
+            <img src="img/page-foresthome-features-img01_pc.jpg" alt="POST 02">
+          </div>
+          </a>
+        </div>
+        <div class="section-works__slider__item">
+          <div class="section-works__slider__item__img">
+            <img src="img/pic.jpg" alt="POST 03">
+          </div>
+          </a>
+        </div>
+        <div class="section-works__slider__item">
+          <div class="section-works__slider__item__img">
+            <img src="img/page-foresthome-features-img01_pc.jpg" alt="POST 04">
+          </div>
+          </a>
+        </div>
+        <div class="section-works__slider__item">
+          <div class="section-works__slider__item__img">
+            <img src="img/pic.jpg" alt="POST 05">
+          </div>
+          </a>
+        </div>
+        <div class="section-works__slider__item">
+          <div class="section-works__slider__item__img">
+            <img src="img/page-foresthome-features-img01_pc.jpg" alt="POST 06">
+          </div>
+          </a>
+        </div>
+
+      </div>
     </div>
-    <div class="progress">
-      <progress class="progress__images" id="css3" max="100" value="50"></progress>
-      <span class="progress__arrow">
-        <div> <- left arrow</div>
-            <div>right arrow -> </div>
-      </span>
-    </div>
-  </section> -->
+
+  </section>
   <!-- Company -->
-  <!-- <section class="compnay">
-    <div class="company__header">
-      <h1>Company</h1>
-      <h2>会社概要</b>
-    </div>
-    <div class="company__table">
-      <table border="1">
-        <tr>
-          <td>商号</td>
-          <td>VISION ARCHITECTURE</td>
-        </tr>
-        <tr>
-          <td>社名</td>
-          <td>株式会社フォレストホーム</td>
-        </tr>
-        <tr>
-          <td>所在地</td>
-          <td>千葉市中央区弁天1-15-3リードシー千葉駅前ビルB1F</td>
-        </tr>
-        <tr>
-          <td>電話番号</td>
-          <td>0120-227-667</td>
-        </tr>
-        <tr>
-          <td>代表者</td>
-          <td>代表取締役 森 俊英</td>
-        </tr>
-        <tr>
-          <td>事業内容</td>
-          <td>各種設計業務　設計コンサルタント業務　集客、設計、受注代行業務</td>
-        </tr>
-        <tr>
-          <td>登録免許</td>
-          <td>一級建築士事務所　千葉県知事　第1-2403-7177号<br>
-            建設業許可　（般-6）第45422号</td>
-        </tr>
-      </table>
-    </div>
-  </section> -->
-  <!-- Staff -->
-  <!-- <section class="staff">
-    <div class="company__header">
-      <h1>Staff</h1>
-      <h2>スタッフ</b>
-    </div>
-    <div class="staff__post">
-      <div class="pic">
-        <img src="" alt="staff1">
+  <section class="forest__company">
+    <div class="forest__company__container">
+      <div class="forest__company__header">
+        <span>Company</span>
+        <h2>会社概要</b>
       </div>
-      <div class="txt">
-        <h3>Director　/　CEO</h3>
-        <h4>森 俊英</h4>
-        <p>mori toshihide.</p>
-      </div>
-    </div>
-    <div class="staff__post">
-      <div class="pic">
-        <img src="" alt="staff2">
-      </div>
-      <div class="txt">
-        <h3>Architect　/　COO</h3>
-        <h4>鈴木 百香</h4>
-        <p>suzuki momoka</p>
-      </div>
-    </div>
-    <div class="staff__post">
-      <div class="pic">
-        <img src="" alt="staff3">
-      </div>
-      <div class="txt">
-        <h3>Director　/　CMO</h3>
-        <h4>田村 和大</h4>
-        <p>tamura kazuhiro</p>
-      </div>
-    </div>
-    <div class="staff__post">
-      <div class="pic">
-        <img src="" alt="staff4">
-      </div>
-      <div class="txt">
-        <div>
-          <h3>Architect　/　CSDO</h3>
-          <h4>白岩 久知</h4>
-          <p>shiraiwa hisatomo</p>
+      <div class="forest__company__table">
+        <div class="forest__company__table__row">
+          <div class="forest__company__table__row__title">商号</div>
+          <div class="forest__company__table__row__contents">VISION ARCHITECTURE</div>
+        </div>
+        <div class="forest__company__table__row">
+          <div class="forest__company__table__row__title">社名</div>
+          <div class="forest__company__table__row__contents">株式会社フォレストホーム</div>
+        </div>
+        <div class="forest__company__table__row">
+          <div class="forest__company__table__row__title">所在地</div>
+          <div class="forest__company__table__row__contents">千葉市中央区弁天1-15-3リードシー千葉駅前ビルB1F</div>
+        </div>
+        <div class="forest__company__table__row">
+          <div class="forest__company__table__row__title">電話番号</div>
+          <div class="forest__company__table__row__contents">0438-53-8850</div>
+        </div>
+        <div class="forest__company__table__row">
+          <div class="forest__company__table__row__title">代表者</div>
+          <div class="forest__company__table__row__contents">代表取締役 森 俊英</div>
+        </div>
+        <div class="forest__company__table__row">
+          <div class="forest__company__table__row__title">事業内容</div>
+          <div class="forest__company__table__row__contents">各種設計業務　設計コンサルタント業務　集客、設計、受注代行業務</div>
+        </div>
+        <div class="forest__company__table__row">
+          <div class="forest__company__table__row__title">登録免許</div>
+          <div class="forest__company__table__row__contents"> 一級建築士事務所　千葉県知事　第1-2403-7177号<br>
+            建設業許可　（般-6）第45422号</div>
         </div>
       </div>
     </div>
-  </section> -->
+    </div>
+  </section>
+
+  <!-- Staff -->
+  <section class="forest__staff">
+    <div class="forest__staff__container">
+      <div class="forest__staff__header">
+        <span>Staff</span>
+        <h2>スタッフ</b>
+      </div>
+      <div class="forest__staff__wrapper">
+        <div class="forest__staff__post">
+          <div class="forest__staff__post__pic">
+            <img src="img/pic.jpg" alt="staff1">
+          </div>
+          <div class="forest__staff__post__txt">
+            <h3>Director　/　CEO</h3>
+            <h4>森 俊英</h4>
+            <p>mori toshihide.</p>
+          </div>
+        </div>
+        <div class="forest__staff__post">
+          <div class="forest__staff__post__pic">
+            <img src="img/pic.jpg" alt="staff2">
+          </div>
+          <div class="forest__staff__post__txt">
+            <h3>Architect　/　COO</h3>
+            <h4>鈴木 百香</h4>
+            <p>suzuki momoka</p>
+          </div>
+        </div>
+        <div class="forest__staff__post">
+          <div class="forest__staff__post__pic">
+            <img src="img/pic.jpg" alt="staff3">
+          </div>
+          <div class="forest__staff__post__txt">
+            <div>
+              <h3>Architect　/　CSDO</h3>
+              <h4>白岩 久知</h4>
+              <p>shiraiwa hisatomo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div class="forest__staff__container">
+  </section>
   <!-- Access -->
   <!-- <section class="access">
     <div class="access__container">
@@ -466,5 +513,75 @@
     Copyright &copy; VISION ARCHITECTURE ALL rights reserved.
   </p>
 </footer> -->
+
+<script>
+  $(function () {
+    let slider = $(".section-works__slider").slick({
+      arrows: true,
+      infinite: true,
+      loop: true,
+      prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+      nextArrow: '<div class="slide-arrow next-arrow"></div>',
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerMode: false,
+      speed: 500,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      variableWidth: true,
+      centerMode: true,
+      customPaging: function (slider, i) {
+        let slideNumber = i.toString().padStart(2, "0");
+        return $('<div class="section-works__slider__dots__num">').text(slideNumber);
+      },
+      dotsClass: "section-works__slider__dots",
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: false,
+            centerPadding: "6%",
+          },
+        },
+      ],
+    });
+
+    function setActiveDot(index) {
+      $(".section-works__slider__dots__num").removeClass("slick-active");
+      for (let i = 0; i <= index; i++) {
+        $(".section-works__slider__dots__num").eq(i).addClass("slick-active");
+      }
+    }
+
+    slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+      if (currentSlide === slick.$slides.length - 1 && nextSlide === 0) {
+        $(".section-works__slider__dots__num").addClass("no-transition").removeClass("slick-active");
+      } else if (currentSlide === 0 && nextSlide === slick.$slides.length - 1) {
+        $(".section-works__slider__dots__num").addClass("no-transition");
+        setActiveDot(nextSlide);
+      } else {
+        setActiveDot(nextSlide);
+      }
+    });
+
+    slider.on("afterChange", function (event, slick, currentSlide) {
+      if (currentSlide === 0) {
+        setTimeout(function () {
+          $(".section-works__slider__dots__num").removeClass("no-transition");
+          setActiveDot(currentSlide);
+        }, 0);
+      } else if (currentSlide === slick.$slides.length - 1) {
+        setTimeout(function () {
+          $(".section-works__slider__dots__num").removeClass("no-transition");
+        }, 0);
+      }
+    });
+
+    setActiveDot(0);
+  });
+</script>
 
 </html>

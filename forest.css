@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif+JP&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -32,6 +35,7 @@ header .logo__img {
 header .forest__nav {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 header .forest__nav__list {
   display: flex;
@@ -41,7 +45,7 @@ header .forest__nav__list {
 header .forest__nav__item__link {
   color: #fff;
   margin-right: 80px;
-  font-size: 1.3rem;
+  font: normal 20px/1 "Noto Serif JP";
 }
 header .forest__nav__item__toggle {
   display: flex;
@@ -53,7 +57,7 @@ body .forest__main {
   width: 100%;
   height: 100vh;
   top: 0;
-  background-image: url(pic.jpg);
+  background-image: url(img/pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -70,22 +74,20 @@ body .forest__main__scroll {
 }
 body .forest__what-is {
   width: 100%;
-  background-image: url(vision-bg.jpg);
+  background-image: url(img/vision-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 body .forest__what-is .forest__container {
   max-width: 1200px;
+  margin: auto;
   justify-content: space-between;
   display: flex;
   align-items: center;
   column-gap: 3rem;
-  border: 1px solid aqua;
-  margin: auto;
 }
 body .forest__what-is__text {
   width: 50%;
-  border: 1px solid white;
   color: #fff;
 }
 body .forest__what-is__text::before {
@@ -110,24 +112,33 @@ body .forest__what-is__text h2 {
 }
 body .forest__what-is__text p {
   margin-top: 50px;
-  font: normal 15px/2 "";
+  font: normal 15px/2 "Noto Serif JP";
 }
 body .forest__what-is__image {
   width: 771px;
 }
 body .forest__what-is__image__img {
   width: 100%;
-  border: 1px solid white;
   margin: 44px 0px 44px 70px;
 }
 body .forest__features {
   width: 100%;
-  background-image: url(features-bg.jpg);
+  background-image: url(img/features-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  display: inline-block;
 }
-body .forest__features::before {
+body .forest__features__box {
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3rem;
+  padding-top: 100px;
+  margin-bottom: 60px;
+}
+body .forest__features__box::before {
   content: "";
   display: block;
   padding-left: 10px;
@@ -138,24 +149,310 @@ body .forest__features::before {
   margin-top: 10px;
   margin-right: 20px;
 }
-body .forest__features span {
+body .forest__features__box span {
   color: white;
   margin-left: 70px;
 }
-body .forest__features h2 {
+body .forest__features__box h2 {
   color: #fff;
   margin-top: 50px;
   font: bold 30px/1.3 "";
 }
 body .forest__features__header {
-  border: 1px solid yellow;
+  margin-bottom: 60px;
 }
 body .forest__features__container {
   display: flex;
-  border: 1px solid pink;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: row-reverse;
+}
+body .forest__features__container:nth-of-type(2) .forest__features__contents {
+  flex-direction: row-reverse;
+}
+body .forest__features__container:nth-of-type(2) .forest__features__contents .forest__features__contents__img .forest__features__contents__image {
+  margin-left: 50px;
+  object-fit: contain;
+  position: relative;
+  top: 0px;
 }
 body .forest__features__contents {
+  display: flex;
+  position: relative;
+  padding-bottom: 50px;
+}
+body .forest__features__contents__image {
+  width: 100%;
+  padding-right: 50px;
+}
+body .forest__features__text__inner__header {
+  font: bold 20px/1.5 "Noto Serif JP";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+}
+body .forest__features__text__inner__header span {
+  padding-right: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 140px;
+  border-right: 1px solid #fff;
+}
+body .forest__features__text__inner__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  padding: 20px;
+}
+body .forest__features__text__inner__contents {
+  padding: 20px;
+  font: normal 17px/2 "Noto Serif JP";
+}
+body .forest__features__text__inner__image {
+  display: flex;
+}
+body .forest__features__text__inner__image img {
+  margin: 70px;
+  width: 300px;
+}
+
+.forest__works {
+  width: 100%;
+  height: 90vh;
+  background-image: url(img/access-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+.forest__works .forest__container {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  margin-bottom: 100px;
+}
+.forest__works .forest__container::before {
+  content: "";
+  display: block;
+  padding-left: 10px;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  margin-top: -146px;
+  margin-right: 20px;
+}
+.forest__works .forest__container span {
+  color: white;
+  margin-left: 70px;
+}
+.forest__works .forest__container h2 {
+  color: #fff;
+  margin-top: 50px;
+}
+.forest__works .section-works__slider-wrap {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+}
+.forest__works .section-works__slider {
+  display: none;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.forest__works .section-works__slider.slick-initialized {
+  display: block;
+}
+.forest__works .section-works__slider .slide-arrow {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  z-index: 999;
+}
+.forest__works .section-works__slider .slide-arrow.next-arrow {
+  right: calc((100% - 1070px) / 2);
+  background: url(img/icon_arw_next.svg) no-repeat center center/contain;
+}
+.forest__works .section-works__slider .slide-arrow.prev-arrow {
+  right: calc((100% - 920px) / 2);
+  background: url(img/icon_arw_prev.svg) no-repeat center center/contain;
+}
+.forest__works .section-works__slider .slide-arrow.slick-disabled {
+  opacity: 0.5;
+}
+.forest__works .section-works__slider__dots {
+  display: flex;
+  margin: 120px auto 0;
+  width: 100%;
+  max-width: 950px;
+  transform: translateX(-100px);
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+.forest__works .section-works__slider__dots li {
+  text-indent: -9999px;
+  width: 100%;
+  height: 2px;
+  pointer-events: none;
+}
+.forest__works .section-works__slider__dots li > div {
+  display: flex;
+  background: #999;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+  height: 100%;
+  transform: scaleX(1) translate3d(0, 0, 0);
+  transform-origin: right;
+}
+.forest__works .section-works__slider__dots li > div.slick-active {
+  transform: scaleX(0) translate3d(0, 0, 0);
+}
+.forest__works .section-works__slider__dots__num.no-transition {
+  transition: none;
+}
+.forest__works .section-works__slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 30px;
+  object-fit: cover;
+  padding-top: 50px;
+  margin-left: 200px;
+  opacity: 0.5;
+}
+.forest__works .section-works__slider__item.slick-slide.slick-current {
+  transform: scale(1.3);
+  transition: 1s;
+  opacity: 1.4;
+}
+.forest__works .section-works__slider__item__img > img {
+  color: #fff;
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.forest__company {
+  background-color: #343c3a;
+  width: 100%;
+  height: 80%;
+  display: inline-block;
+}
+.forest__company__container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3rem;
+  margin-bottom: 100px;
+}
+.forest__company__header {
+  padding-bottom: 50px;
+}
+.forest__company__header::before {
+  content: "";
+  display: block;
+  padding-left: 10px;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.forest__company__header span {
+  color: white;
+  margin-left: 70px;
+}
+.forest__company__header h2 {
+  color: #fff;
+  margin-top: 50px;
+}
+.forest__company__table {
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+.forest__company__table__row {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font: normal 17px/2 "Noto Serif JP";
+}
+.forest__company__table__row__title {
+  padding: 20px;
+  width: 150px;
+}
+.forest__company__table__row__contents {
+  padding: 20px;
+}
+
+.forest__staff {
+  background-color: #343c3a;
+  width: 100%;
+  height: 80%;
+}
+.forest__staff__container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid aqua;
+}
+.forest__staff__header {
+  border: 1px solid red;
+  padding-bottom: 50px;
+}
+.forest__staff__header::before {
+  content: "";
+  display: block;
+  padding-left: 10px;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.forest__staff__header span {
+  color: #fff;
+  margin-left: 70px;
+}
+.forest__staff__header h2 {
+  color: #fff;
+  margin-top: 50px;
+}
+.forest__staff__wrapper {
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: space-between;
+}
+.forest__staff__post {
   border: 1px solid pink;
+}
+.forest__staff__post img {
+  width: 300px;
 }
 
 footer {
