@@ -181,19 +181,23 @@ body .forest__features__contents {
   position: relative;
   padding-bottom: 50px;
 }
+body .forest__features__contents__img {
+  width: 100%;
+}
 body .forest__features__contents__image {
   width: 100%;
   padding-right: 50px;
 }
 body .forest__features__text__inner__header {
-  font: normal 16px/1 "Noto Serif JP";
+  font: normal 16px/2 "Noto Serif JP";
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #fff;
 }
-body .forest__features__text__inner__header span {
-  padding-right: 80px;
+body .forest__features__text__inner__header__number {
+  width: 100%;
+  padding-right: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,11 +206,11 @@ body .forest__features__text__inner__header span {
   border-right: 1px solid #fff;
 }
 body .forest__features__text__inner__title {
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 140px;
-  padding: 20px;
 }
 body .forest__features__text__inner__contents {
   padding: 20px;
@@ -236,7 +240,6 @@ body .forest__features__text__inner__image img {
   display: flex;
   align-items: center;
   column-gap: 3rem;
-  margin-bottom: 100px;
 }
 .forest__introduction .forest__container::before {
   content: "";
@@ -256,6 +259,9 @@ body .forest__features__text__inner__image img {
 .forest__introduction .forest__container h2 {
   color: #3e3e3e;
   margin-top: 50px;
+}
+.forest__introduction__wrap {
+  padding: 120px;
 }
 .forest__introduction__contents {
   display: flex;
