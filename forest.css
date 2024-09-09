@@ -25,7 +25,8 @@ header {
   justify-content: space-between;
 }
 header .logo {
-  margin-left: 100px;
+  margin-left: 20px;
+  width: 20%;
 }
 header .logo__img {
   width: 70%;
@@ -36,11 +37,12 @@ header .forest__nav {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  padding-left: 10%;
 }
 header .forest__nav__list {
   display: flex;
   align-items: center;
-  gap: 29px;
+  gap: 30px;
 }
 header .forest__nav__item__link {
   color: #fff;
@@ -53,6 +55,9 @@ header .forest__nav__item__toggle {
   justify-content: center;
 }
 
+body {
+  box-sizing: border-box;
+}
 body .forest__main {
   width: 100%;
   height: 100vh;

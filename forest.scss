@@ -9,6 +9,8 @@
   box-sizing: border-box;
 }
 
+
+
 ul,
 ol,
 li {
@@ -25,9 +27,11 @@ header {
   position: fixed;
   display: flex;
   justify-content: space-between;
+  
 
   .logo {
-    margin-left: 100px;
+    margin-left: 20px;
+    width: 20%;
 
     &__img {
       width: 70%;
@@ -40,11 +44,13 @@ header {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    padding-left: 10%;
 
     &__list {
+  
       display: flex;
       align-items: center;
-      gap: 29px;
+      gap: 30px;
     }
 
     &__item {
@@ -70,7 +76,8 @@ header {
 }
 
 body {
-
+  box-sizing: border-box;
+  
   //main
   .forest__main {
     width: 100%;
