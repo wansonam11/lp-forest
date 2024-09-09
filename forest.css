@@ -338,9 +338,11 @@ body .forest__features__text__inner__image img {
   margin-left: 200px;
   opacity: 0.5;
 }
+.forest__works .section-works__slider__item.slick-slide {
+  transition: 0.5s;
+}
 .forest__works .section-works__slider__item.slick-slide.slick-current {
   transform: scale(1.3);
-  transition: 1s;
   opacity: 1.4;
 }
 .forest__works .section-works__slider__item__img > img {
@@ -412,16 +414,14 @@ body .forest__features__text__inner__image img {
   height: 80%;
 }
 .forest__staff__container {
-  padding-top: 100px;
+  padding-top: 40px;
   padding-bottom: 100px;
   max-width: 1200px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid aqua;
 }
 .forest__staff__header {
-  border: 1px solid red;
   padding-bottom: 50px;
 }
 .forest__staff__header::before {
@@ -444,15 +444,27 @@ body .forest__features__text__inner__image img {
   margin-top: 50px;
 }
 .forest__staff__wrapper {
-  border: 1px solid yellow;
   display: flex;
   justify-content: space-between;
 }
-.forest__staff__post {
-  border: 1px solid pink;
-}
-.forest__staff__post img {
+.forest__staff__post__pic img {
   width: 300px;
+  height: 350px;
+  object-fit: cover;
+}
+.forest__staff__post__txt {
+  color: #fff;
+  font: normal 17px/2 "Noto Serif JP";
+  padding-top: 20px;
+}
+.forest__staff__post__txt h4 {
+  font: bold 30px/2 "Noto Serif JP";
+}
+.forest__staff__post__txt p {
+  color: #999;
+}
+.forest__staff__post__txt {
+  font: normal 17px/2 "Noto Serif JP";
 }
 
 footer {

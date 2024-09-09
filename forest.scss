@@ -424,9 +424,10 @@ body {
 
 
     &.slick-slide {
+      transition: 0.5s;
+
       &.slick-current {
         transform: scale(1.3);
-        transition: 1s;
         opacity: 1.4;
       }
     }
@@ -515,17 +516,15 @@ body {
   height: 80%;
 
   &__container {
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 100px;
     max-width: 1200px;
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid aqua;
   }
 
   &__header {
-    border: 1px solid red;
     padding-bottom: 50px;
 
     &::before {
@@ -552,20 +551,44 @@ body {
   }
 
   &__wrapper {
-    border: 1px solid yellow;
     display: flex;
     justify-content: space-between;
-
   }
 
   &__post {
-    border: 1px solid pink;
 
-    img {
-      width: 300px;
+    &__pic {
+      img {
+        width: 300px;
+        height: 350px;
+        object-fit: cover;
+      }
+    }
+
+    &__txt {
+      color: #fff;
+      font: normal 17px/2 "Noto Serif JP";
+      padding-top: 20px;
+
+      h4 {
+        font: bold 30px/2 "Noto Serif JP";
+      }
+
+      p {
+        color: #999;
+      }
+    }
+
+
+
+    &__txt {
+      font: normal 17px/2 "Noto Serif JP";
     }
   }
+
 }
+
+
 
 footer {
   background-color: yellow;
