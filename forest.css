@@ -45,7 +45,7 @@ header .forest__nav__list {
 header .forest__nav__item__link {
   color: #fff;
   margin-right: 80px;
-  font: normal 20px/1 "Noto Serif JP";
+  font: normal 16px/1 "Noto Serif JP";
 }
 header .forest__nav__item__toggle {
   display: flex;
@@ -186,7 +186,7 @@ body .forest__features__contents__image {
   padding-right: 50px;
 }
 body .forest__features__text__inner__header {
-  font: bold 20px/1.5 "Noto Serif JP";
+  font: normal 16px/1 "Noto Serif JP";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,7 +210,7 @@ body .forest__features__text__inner__title {
 }
 body .forest__features__text__inner__contents {
   padding: 20px;
-  font: normal 17px/2 "Noto Serif JP";
+  font: normal 14px/2 "Noto Serif JP";
 }
 body .forest__features__text__inner__image {
   display: flex;
@@ -273,7 +273,7 @@ body .forest__features__text__inner__image img {
 }
 .forest__introduction__contents__box {
   padding-left: 30px;
-  font: normal 20px/2 "Noto Serif JP";
+  font: normal 14px/2 "Noto Serif JP";
 }
 .forest__introduction__contents__box .forest__introduction__contents__text__title {
   border-top: 1px solid #3e3e3e;
@@ -289,7 +289,7 @@ body .forest__features__text__inner__image img {
 
 .forest__works {
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   background-image: url(img/access-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -401,7 +401,7 @@ body .forest__features__text__inner__image img {
   overflow: hidden;
   margin-left: 30px;
   object-fit: cover;
-  padding-top: 100px;
+  padding-top: 80px;
   margin-left: 200px;
   opacity: 0.5;
 }
@@ -414,7 +414,7 @@ body .forest__features__text__inner__image img {
 }
 .forest__works .section-works__slider__item__img > img {
   color: #fff;
-  width: 110%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -521,11 +521,11 @@ body .forest__features__text__inner__image img {
 }
 .forest__staff__post__txt {
   color: #fff;
-  font: normal 17px/2 "Noto Serif JP";
+  font: normal 14px/2 "Noto Serif JP";
   padding-top: 20px;
 }
 .forest__staff__post__txt h4 {
-  font: bold 30px/2 "Noto Serif JP";
+  font: bold 16px/2 "Noto Serif JP";
 }
 .forest__staff__post__txt p {
   color: #999;
