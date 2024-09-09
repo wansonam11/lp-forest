@@ -220,9 +220,76 @@ body .forest__features__text__inner__image img {
   width: 300px;
 }
 
-.forest__works {
+.forest__introduction {
   width: 100%;
   height: 90vh;
+  background: #fff;
+  color: #3e3e3e;
+  position: relative;
+  display: inline-block;
+}
+.forest__introduction .forest__container {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  margin-bottom: 100px;
+}
+.forest__introduction .forest__container::before {
+  content: "";
+  display: block;
+  padding-left: 10px;
+  width: 50px;
+  height: 1px;
+  background: #3e3e3e;
+  position: absolute;
+  margin-top: -90px;
+  margin-right: 20px;
+}
+.forest__introduction .forest__container span {
+  color: #3e3e3e;
+  margin-left: 70px;
+}
+.forest__introduction .forest__container h2 {
+  color: #3e3e3e;
+  margin-top: 50px;
+}
+.forest__introduction__contents {
+  display: flex;
+  margin-bottom: 70px;
+  padding-bottom: 60px;
+}
+.forest__introduction__contents.reverse {
+  flex-direction: row-reverse;
+}
+.forest__introduction__contents.reverse img {
+  margin-left: 100px;
+}
+.forest__introduction__contents img {
+  width: 40%;
+}
+.forest__introduction__contents__box {
+  padding-left: 30px;
+  font: normal 20px/2 "Noto Serif JP";
+}
+.forest__introduction__contents__box .forest__introduction__contents__text__title {
+  border-top: 1px solid #3e3e3e;
+  border-bottom: 1px solid #3e3e3e;
+  padding: 20px;
+}
+.forest__introduction__contents__box .forest__introduction__contents__text__contents {
+  padding: 20px;
+}
+.forest__introduction__contents__box .forest__introduction__contents__text__contents h3 {
+  margin-bottom: 30px;
+}
+
+.forest__works {
+  width: 100%;
+  height: 100vh;
   background-image: url(img/access-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -232,7 +299,7 @@ body .forest__features__text__inner__image img {
 .forest__works .forest__container {
   padding-top: 100px;
   max-width: 1200px;
-  margin: auto;
+  margin: 50px auto;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -329,12 +396,12 @@ body .forest__features__text__inner__image img {
   align-items: center;
   justify-content: center;
   width: 600px;
-  height: 400px;
+  height: 450px;
   display: inline-block;
   overflow: hidden;
   margin-left: 30px;
   object-fit: cover;
-  padding-top: 50px;
+  padding-top: 100px;
   margin-left: 200px;
   opacity: 0.5;
 }

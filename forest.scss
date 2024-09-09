@@ -283,10 +283,93 @@ body {
   }
 }
 
+
+//Business Introduction
+.forest__introduction {
+  width: 100%;
+  height: 90vh;
+  background: #fff;
+  color: #3e3e3e;
+  position: relative;
+  display: inline-block;
+
+  .forest__container {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    margin-bottom: 100px;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-left: 10px;
+      width: 50px;
+      height: 1px;
+      background: #3e3e3e;
+      position: absolute;
+      margin-top: -90px;
+      margin-right: 20px;
+    }
+
+    span {
+      color: #3e3e3e;
+      margin-left: 70px;
+    }
+
+    h2 {
+      color: #3e3e3e;
+      margin-top: 50px;
+    }
+  }
+
+  &__wrap {
+
+  }
+  &__contents {
+    display: flex;
+    margin-bottom: 70px;
+    padding-bottom: 60px;
+
+    &.reverse {
+      flex-direction: row-reverse;
+
+      img {
+        margin-left: 100px;
+      }
+    }
+
+    img {
+      width: 40%;
+    }
+
+    &__box {
+      padding-left: 30px;
+      font: normal 20px/2 "Noto Serif JP";
+
+      .forest__introduction__contents__text__title {
+        border-top: 1px solid #3e3e3e;
+        border-bottom: 1px solid #3e3e3e;
+        padding: 20px;
+      }
+
+      .forest__introduction__contents__text__contents {
+        padding: 20px;
+         h3 {
+          margin-bottom: 30px;
+         }
+      }
+    }
+  }
+}
+
 //Works
 .forest__works {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(img/access-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -294,9 +377,10 @@ body {
   position: relative;
 
   .forest__container {
+
     padding-top: 100px;
     max-width: 1200px;
-    margin: auto;
+    margin: 50px auto;
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -326,7 +410,6 @@ body {
     }
   }
 
-
   .section-works__slider-wrap {
     width: 100%;
     margin: 0px auto;
@@ -336,7 +419,6 @@ body {
   .section-works__slider {
     display: none;
     width: 100%;
-
     margin: 0px auto;
     overflow: hidden; //!!!!!
   }
@@ -413,15 +495,14 @@ body {
     align-items: center;
     justify-content: center;
     width: 600px;
-    height: 400px;
+    height: 450px;
     display: inline-block;
     overflow: hidden;
     margin-left: 30px;
     object-fit: cover;
-    padding-top: 50px;
+    padding-top: 100px;
     margin-left: 200px;
     opacity: .5;
-
 
     &.slick-slide {
       transition: 0.5s;
@@ -432,7 +513,7 @@ body {
       }
     }
 
-    &__img>img {
+    &__img > img {
       color: #fff;
       width: 110%;
       height: 100%;
@@ -457,7 +538,6 @@ body {
     align-items: center;
     column-gap: 3rem;
     margin-bottom: 100px;
-
   }
 
   &__header {
@@ -495,7 +575,6 @@ body {
       border-bottom: 1px solid #fff;
       color: #fff;
       font: normal 17px/2 "Noto Serif JP";
-
 
       &__title {
         padding: 20px;
@@ -587,8 +666,6 @@ body {
   }
 
 }
-
-
 
 footer {
   background-color: yellow;
