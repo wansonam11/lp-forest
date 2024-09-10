@@ -1,27 +1,24 @@
-.post-slider{
-  width:100%;
-  margin:0px auto;
-  position:relative;
-  border: 1px solid aqua;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
-  .post-wrapper {
-    width:84%;
-    height:350px;
-    margin:0px auto;
-    overflow: hidden; //!!!!!
-    border:1px dashed red;
+ul,
+ol,
+li {
+  list-style: none;
+}
 
-    .post {
-      width:100x;
-      height:350px;
-      display:inline-block;
-      margin:0px 10px;
-      background:gray;
-      margin-left: 20px;
+.post {
 
-      img {
-        width: 100%;
-      }
-    }
+
+  .post_bk {
+    width: 80%;
+    height: 80vh;
+    background-image: url(img/pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
