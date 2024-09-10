@@ -370,7 +370,7 @@ body .forest__introduction__contents__box .forest__introduction__contents__text_
 }
 @media screen and (max-width: 1024px) {
   body .forest__introduction .forest__container {
-    padding: 20px;
+    padding: 60px;
   }
   body .forest__introduction .forest__introduction__wrap {
     padding: 60px;
