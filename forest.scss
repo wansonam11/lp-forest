@@ -223,8 +223,7 @@ body {
         text-align: center;
       }
 
-      .forest__what-is__image {
-      }
+      .forest__what-is__image {}
     }
   }
 
@@ -676,6 +675,10 @@ body {
     }
 
     @media screen and (max-width: 1024px) {
+      .forest__works {
+        height: 94vh;
+      }
+
       .forest__container {
         padding: 60px;
       }
@@ -716,6 +719,12 @@ body {
         background: url(img/icon_arw_prev.svg) no-repeat center center / contain;
       }
 
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .forest__works {
+      height: 94vh;
     }
   }
 
@@ -905,22 +914,23 @@ body {
     }
 
     @media screen and (max-width: 640px) {
-      .forest__staff__container {
-      }
+      .forest__staff__container {}
 
       .forest__staff__wrapper {
         display: block;
         padding-right: 0px;
 
       }
+
       .forest__staff__post {
         width: 400px;
         margin: 0 auto;
       }
+
       .forest__staff__post__txt {
         padding-top: 0px;
       }
-      
+
       p {
         padding-bottom: 20px;
         font-size: 14px;
@@ -990,20 +1000,22 @@ body {
       }
     }
   }
-  
+
   @media screen and (max-width: 1024px) {
     .forest__access {
 
       width: 100%;
       height: 100%;
- 
-     }
+
+    }
+
     .forest__access__container__txt {
       padding: 30px;
     }
 
 
   }
+
   @media screen and (max-width: 640px) {
     .forest__access__container {
       grid-template-columns: 1fr;

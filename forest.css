@@ -528,6 +528,9 @@ body .forest__works .section-works__slider__item__img > img {
   object-fit: cover;
 }
 @media screen and (max-width: 1024px) {
+  body .forest__works .forest__works {
+    height: 94vh;
+  }
   body .forest__works .forest__container {
     padding: 60px;
   }
@@ -558,6 +561,11 @@ body .forest__works .section-works__slider__item__img > img {
   body .forest__works .section-works__slider .slide-arrow.prev-arrow {
     right: calc((100% - 430px) / 2);
     background: url(img/icon_arw_prev.svg) no-repeat center center/contain;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body .forest__works {
+    height: 94vh;
   }
 }
 body .forest__company {
