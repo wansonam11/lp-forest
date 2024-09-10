@@ -105,6 +105,7 @@ header {
     border: 3px solid blue;
     display: block;
   }
+
 }
 
 body {
@@ -212,6 +213,17 @@ body {
       .forest__what-is__image__img {
         width: 80%;
 
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .forest__container {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .forest__what-is__image {
       }
     }
   }
@@ -372,7 +384,8 @@ body {
         padding-right: 0px;
         margin-bottom: 30px;
       }
-      .forest__features__text__inner__header__number{
+
+      .forest__features__text__inner__header__number {
         padding-right: 80px;
       }
 
@@ -490,6 +503,7 @@ body {
           img {
             width: 100%;
           }
+
           &.reverse {
             img {
               margin-left: 0px;
@@ -497,6 +511,7 @@ body {
           }
 
         }
+
         .forest__introduction__contents__box {
           margin-top: 30px;
           padding-left: 0px;
@@ -681,8 +696,26 @@ body {
 
       .section-works__slider__dots {
         width: 90%;
-        padding-left: px;
       }
+    }
+
+    @media screen and (max-width: 640px) {
+
+      .section-works__slider {
+        width: 80%;
+        overflow: visible;
+      }
+
+      .section-works__slider .slide-arrow.next-arrow {
+        right: calc((100% - 600px) / 2);
+        background: url(img/icon_arw_next.svg) no-repeat center center / contain;
+      }
+
+      .section-works__slider .slide-arrow.prev-arrow {
+        right: calc((100% - 430px) / 2);
+        background: url(img/icon_arw_prev.svg) no-repeat center center / contain;
+      }
+
     }
   }
 
@@ -755,6 +788,20 @@ body {
       .forest__company__container {
         padding: 60px;
         margin-bottom: 0px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .forest__company__container {
+        margin-bottom: 0px;
+      }
+
+      .forest__company__table__row__title {
+        width: 100px;
+      }
+
+      .forest__company__table__row {
+        font: normal 13px/2 "Noto Serif JP";
       }
     }
   }
@@ -830,7 +877,7 @@ body {
       }
 
       &__txt {
-        font: normal 17px/2 "Noto Serif JP";
+        font: normal 16px/2 "Noto Serif JP";
       }
     }
 
@@ -850,11 +897,33 @@ body {
         object-fit: cover;
       }
 
-      .forest__staff__post__pic {
-      }
+      .forest__staff__post__pic {}
 
       .forest__staff__post__pic__img {
         width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .forest__staff__container {
+      }
+
+      .forest__staff__wrapper {
+        display: block;
+        padding-right: 0px;
+
+      }
+      .forest__staff__post {
+        width: 400px;
+        margin: 0 auto;
+      }
+      .forest__staff__post__txt {
+        padding-top: 0px;
+      }
+      
+      p {
+        padding-bottom: 20px;
+        font-size: 14px;
       }
     }
   }
@@ -920,13 +989,32 @@ body {
         }
       }
     }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .forest__access {
 
-    @media screen and (max-width: 1024px) {
-      .forest__access__container__txt {
-        padding: 30px;
-      }
+      width: 100%;
+      height: 100%;
+ 
+     }
+    .forest__access__container__txt {
+      padding: 30px;
+    }
+
+
+  }
+  @media screen and (max-width: 640px) {
+    .forest__access__container {
+      grid-template-columns: 1fr;
+    }
+
+    .forest__access__container__map {
+      border: 1px solid red;
+      height: 300px;
     }
   }
+
 
   //Footer
   .forest__footer {
@@ -987,7 +1075,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-
     }
 
     .forest__footer__logo {
@@ -995,14 +1082,38 @@ body {
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      
-      
     }
 
     .forest__footer__nav {
       margin-top: 50px;
       padding-left: 0px;
       margin-left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+
+    .forest__footer__container {
+      border: 1px solid red;
+    }
+
+    .forest__footer__logo {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      border: 1px solid red;
+      padding-bottom: 20px;
+    }
+
+    .forest__footer__nav {
+      margin: 0 auto;
+    }
+
+    .forest__footer__nav__list {
+      border: 1px solid aqua;
+      flex-direction: column;
     }
   }
 }
