@@ -418,8 +418,16 @@ body .forest__introduction__contents__box .forest__introduction__contents__text_
     margin-bottom: -60px;
   }
   body .forest__introduction .forest__introduction__wrap {
-    padding: 60px;
+    padding: 3%;
   }
+}
+@media screen and (max-width: 1024px) and (max-width: 640px) {
+  body .forest__introduction .forest__introduction__wrap .forest__introduction__wrap {
+    padding: 3%;
+    border: 1px solid red;
+  }
+}
+@media screen and (max-width: 1024px) {
   body .forest__introduction .forest__introduction__wrap .forest__introduction__contents {
     flex-direction: column;
     margin-bottom: 0px;
@@ -628,7 +636,7 @@ body .forest__works .section-works__slider__item__img > img {
     height: 120vh;
   }
   body .forest__container {
-    padding: 60px;
+    padding: 3%;
   }
   body .section-works__slider {
     position: relative;
@@ -862,6 +870,12 @@ body .forest__access__container__txt__img {
   margin-top: 20px;
   width: 400px;
 }
+@media screen and (max-width: 640px) {
+  body .forest__access__container__txt__img__img {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1024px) {
   body .forest__access {
     width: 100%;
@@ -878,6 +892,9 @@ body .forest__access__container__txt__img {
   body .forest__access__container__map {
     border: 1px solid red;
     height: 300px;
+  }
+  body .forest__access__container__txt__img {
+    width: 100%;
   }
 }
 body .forest__footer {
