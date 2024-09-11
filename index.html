@@ -52,6 +52,7 @@
       Scroll Effect
     </div>
   </section>
+
   <!-- what is -->
   <section class="forest__what-is">
     <div class="forest__container">
@@ -71,6 +72,7 @@
       </div>
     </div>
   </section>
+
   <!-- Features -->
   <section class="forest__features">
     <div class="forest__features__box">
@@ -108,7 +110,7 @@
                   </p>
                 </div>
                 <div class="forest__features__text__inner__image">
-                  <img src="img/pic.jpg" alt="forest__features_Image1_bottom">
+                  <img src="img/pic.jpg" class="forest__features__image__bottom">
                 </div>
               </div>
               <div>
@@ -142,7 +144,7 @@
                   </p>
                 </div>
                 <div class="forest__features__text__inner__image reverse">
-                  <img src="img/pic.jpg" alt="forest__features_Image1_bottom">
+                  <img src="img/pic.jpg" class="forest__features__image__bottom">
                 </div>
               </div>
               <div>
@@ -178,7 +180,7 @@
                   </p>
                 </div>
                 <div class="forest__features__text__inner__image">
-                  <img src="img/pic.jpg" alt="forest__features_Image1_bottom">
+                  <img src="img/pic.jpg" class="forest__features__image__bottom">
                 </div>
               </div>
               <div>
@@ -259,8 +261,8 @@
         </div>
       </div>
     </div>
-
   </section>
+
   <!-- Works -->
   　<section class="forest__works">
     <div class="forest__container">
@@ -307,11 +309,10 @@
           </div>
           </a>
         </div>
-
       </div>
     </div>
-
   </section>
+
   <!-- Company -->
   <section class="forest__company">
     <div class="forest__company__container">
@@ -397,6 +398,7 @@
       </div>
     </div class="forest__staff__container">
   </section>
+
   <!-- Access -->
   <section class="forest__access">
     <div class="forest__access__container">
@@ -423,71 +425,8 @@
     </div>
     </div>
   </section>
-  <!-- Contact -->
-  <!-- <section class="contact">
-    <div class="contact__header">
-      <h1>Contact</h1>
-      <h2>お問い合わせ</b>
-        <p>初回の相談は、事務所にて無料で行っています。　※Zoom等のWEB相談も実施しております。</p>
-    </div>
-    <div class="contact__container">
-      <div class="input1">
-        <p>ご計画内容</p>
-        <div class="required">必須</div>
-        <input type="radio" name="chk_info" value="value1" checked="checked">店舗設計
-        <input type="radio" name="chk_info" value="value2">オフィス設計
-        <input type="radio" name="chk_info" value="value3">住宅設計
-        <input type="radio" name="chk_info" value="value4">設計コンサル業務
-      </div>
-      <div class="input2">
-        <p>お名前</p>
-        <div class="required">必須</div>
-        <input class="contact__input" type="text" name="name" placeholder="山田 太郎" required />
-      </div>
-      <div class="input3">
-        <p>フリガナ</p>
-        <div class="required">任意</div>
-        <input class="contact__input" type="text" name="name" placeholder="ヤマダ タロウ" />
-      </div>
-      <div class="input4">
-        <p>郵便番号</p>
-        <div class="required">必須</div>
-        <input class="contact__input" type="text" name="name" placeholder="112-34567" required />
-        <p>郵便番号を入力すると住所が自動で反映されます</p>
-      </div>
-      <div class="input5">
-        <p>住所</p>
-        <div class="required">必須</div>
-        <input class="contact__input" type="text" name="name" placeholder="" required />
-      </div>
-      <div class="input6">
-        <p>電話番号</p>
-        <div class="required">必須</div>
-        <input class="contact__input" type="text" name="name" placeholder="090-123-4567" required />
-      </div>
-      <div class="input7">
-        <p>メールアドレス</p>
-        <div class="required">必須</div>
-        <input class="contact__input" type="text" name="name" placeholder="info@xxxx.co.jp" required />
-        <p>
-          ※「ドメイン指定受信」機能をご利用の方<br>
-          ドメイン設定で「@〇〇.com」を受信可能にしてください。設定されていない場合、返信メールが届きません。<br>
-          ドメイン指定受信機能のご利用方法は、お使いの端末のマニュアルをご参照ください。<br>
-        </p>
-      </div>
-      <div class="input8">
-        <p>お問い合わせ内容</p>
-        <div class="required">任意</div>
-        <textarea placeholder="例）今住んでいる家が古なったので建て替えがしたい" id="story" name="story" rows="6" cols="33"></textarea>
-      </div>
-      <div class="input9">
-        <input type="checkbox" id="accept" name="accept" />
-        <p><em>プライバシーポリシー</em>に同意する。</p>
-      </div>
-    </div>
-    <button class="floating-button" id="floating-button">送信</button>
-  </section> -->
 </body>
+
 <footer class="forest__footer">
   <div class="forest__footer__container">
     <div class="forest__footer__logo">
@@ -521,6 +460,7 @@
   </p>
 </footer>
 
+<!-- script -->
 <script>
   $(function () {
     let slider = $(".section-works__slider").slick({
@@ -586,7 +526,6 @@
         }, 0);
       }
     });
-
     setActiveDot(0);
   });
 </script>
