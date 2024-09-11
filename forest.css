@@ -945,7 +945,8 @@ body .forest__footer .forest__footer__copy {
   display: flex;
   align-items: center;
   justify-content: center;
-  font: bold 16px/2 "Noto Serif JP";
+  font-family: "Noto Serif JP";
+  font-size: 1rem;
   color: #343c3a;
 }
 @media screen and (max-width: 1024px) {
@@ -981,6 +982,9 @@ body .forest__footer .forest__footer__copy {
   }
   body .forest__footer__nav__list {
     flex-direction: column;
+  }
+  body .forest__footer__copy {
+    font-size: 0.5rem;
   }
 }
 

@@ -1177,7 +1177,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      font: bold 16px/2 "Noto Serif JP";
+      font-family : "Noto Serif JP";
+      font-size: 1rem;
       color: #343c3a;
     }
   }
@@ -1222,6 +1223,9 @@ body {
 
     .forest__footer__nav__list {
       flex-direction: column;
+    }
+    .forest__footer__copy {
+      font-size: 0.5rem;
     }
   }
 }
