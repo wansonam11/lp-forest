@@ -316,6 +316,9 @@ body .forest__features__text__inner__image img {
   }
 }
 @media screen and (max-width: 640px) {
+  body .forest__features__box {
+    padding: 3%;
+  }
   body .forest__what-is__image {
     width: 100%;
   }
@@ -424,7 +427,6 @@ body .forest__introduction__contents__box .forest__introduction__contents__text_
 @media screen and (max-width: 1024px) and (max-width: 640px) {
   body .forest__introduction .forest__introduction__wrap .forest__introduction__wrap {
     padding: 3%;
-    border: 1px solid red;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -718,6 +720,7 @@ body .forest__company__table__row__contents {
 @media screen and (max-width: 640px) {
   body .forest__company .forest__company__container {
     margin-bottom: 0px;
+    padding: 3%;
   }
   body .forest__company .forest__company__table__row__title {
     width: 100px;
@@ -802,6 +805,9 @@ body .forest__staff__post__txt {
   }
 }
 @media screen and (max-width: 640px) {
+  body .forest__staff .forest__staff__container {
+    padding: 3%;
+  }
   body .forest__staff .forest__staff__wrapper {
     display: block;
     padding-right: 0px;
@@ -886,6 +892,9 @@ body .forest__access__container__txt__img {
   }
 }
 @media screen and (max-width: 640px) {
+  body .forest__access__container__txt {
+    margin-left: 0px;
+  }
   body .forest__access__container {
     grid-template-columns: 1fr;
   }
