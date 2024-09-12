@@ -586,6 +586,7 @@ body .forest__works .forest__container h2 {
 body .forest__works .section-works__slider-wrap {
   margin: 0px auto;
   position: relative;
+  bottom: 25%;
 }
 body .forest__works .section-works__slider {
   display: none;
