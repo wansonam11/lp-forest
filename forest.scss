@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif+JP&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
 
 * {
   margin: 0px;
@@ -25,7 +25,6 @@ header {
   position: fixed;
   display: flex;
   justify-content: space-between;
-
 
   .logo {
     margin-left: 20px;
@@ -116,6 +115,11 @@ body {
     background-size: cover;
     background-position: center;
 
+    @media screen and (max-width: 1024px) {
+      right: 4vw;
+      flex-wrap: wrap;
+    }
+
     &__scroll {
       display: flex;
       justify-content: center;
@@ -126,13 +130,6 @@ body {
       position: absolute;
       right: 7%;
       bottom: 7%;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .forest__main {
-      right: 4vw;
-      flex-wrap: wrap;
     }
   }
 
@@ -148,15 +145,31 @@ body {
     .forest__container {
       max-width: 1200px;
       margin: auto;
-      justify-content: space-between;
       display: flex;
       align-items: center;
       column-gap: 3rem;
+
+      @media screen and (max-width: 640px) {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+      }
     }
 
     &__text {
-      width: 50%;
+      padding-left: 2%;
+      width: 100%;
       color: #fff;
+
+      @media screen and (max-width: 1024px) {
+        padding-left: 0%;
+      }
+
+      @media screen and (max-width: 640px) {
+        padding: 0px;
+        width: 100%;
+        text-align: left;
+      }
 
       &::before {
         content: "";
@@ -178,7 +191,10 @@ body {
       h2 {
         color: #fff;
         margin-top: 50px;
-        font: bold 30px/1.3 "";
+        font-family: Noto Serif JP;
+        font-size: 30px;
+        font-weight: normal;
+
       }
 
       p {
@@ -188,37 +204,24 @@ body {
     }
 
     &__image {
-      width: 771px;
+      width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        //margin-right: 45px;
+      }
+
+      @media screen and (max-width: 640px) {
+        width: 100%;
+      }
 
       &__img {
         width: 100%;
-        margin: 44px 0px 44px 70px;
-      }
-    }
+        padding: 4%;
 
-    @media screen and (max-width: 1024px) {
-      .forest__what-is__text {
-        padding: 60px;
-      }
 
-      .forest__what-is__image {
-        margin-right: 45px;
-      }
-
-      .forest__what-is__image__img {
-        width: 80%;
-      }
-    }
-
-    @media screen and (max-width: 640px) {
-      .forest__container {
-        display: flex;
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-
-      .forest__what-is__text {
-        padding: 0px;
+        @media screen and (max-width: 1024px) {
+          width: 80%;
+        }
       }
     }
   }
@@ -236,11 +239,19 @@ body {
       max-width: 1200px;
       margin: auto;
       justify-content: space-between;
-      //display: flex;
       align-items: center;
       column-gap: 3rem;
       padding-top: 100px;
       margin-bottom: 60px;
+
+      @media screen and (max-width: 1024px) {
+        padding: 3%;
+        margin-bottom: 0px;
+      }
+
+      @media screen and (max-width: 640px) {
+        padding: 3%;
+      }
 
       &::before {
         content: "";
@@ -261,8 +272,10 @@ body {
 
       h2 {
         color: #fff;
-        margin-top: 50px;
-        font: bold 30px/1.3 "";
+        margin-top: 30px;
+        font-family: Noto Serif JP;
+        font-size: 30px;
+        font-weight: normal;
       }
     }
 
@@ -271,25 +284,38 @@ body {
     }
 
     &__container {
-      &:nth-of-type(2) .forest__features__contents {
-        flex-direction: row-reverse;
-
-        .forest__features__contents__img {
-          padding-left: 50px;
-
-          .forest__features__contents__image {
-            object-fit: contain;
-            position: relative;
-            top: 0px;
-            margin-left: 50px;
-          }
-        }
-      }
-
       display: flex;
       max-width: 1200px;
       margin: 0 auto;
       flex-direction: row-reverse;
+
+      @media screen and (max-width: 640px) {
+        position: relative;
+      }
+
+      &:nth-of-type(2) {
+        .forest__features__contents {
+          flex-direction: row-reverse;
+
+          @media screen and (max-width: 1024px) {
+            flex-direction: column;
+          }
+
+          .forest__features__contents__img {
+            padding-left: 50px;
+
+            @media screen and (max-width: 1024px) {
+              padding-left: 0px;
+            }
+
+            .forest__features__contents__image {
+              object-fit: contain;
+              position: relative;
+              top: 0px;
+            }
+          }
+        }
+      }
     }
 
     &__contents {
@@ -297,20 +323,40 @@ body {
       position: relative;
       padding-bottom: 50px;
 
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+
       &__img {
         width: 100%;
       }
 
       &__image {
         width: 100%;
-        padding-right: 50px;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          padding-right: 0px;
+          margin-bottom: 30px;
+        }
+      }
+
+      &__text {
+
       }
     }
 
     &__text__inner {
+      padding-left: 5%;
+      @media screen and (max-width: 1024px) {
+        padding-left: 0%;
+      }
+
 
       &__header {
-        font: normal 16px/2 "Noto Serif JP";
+        font-family: Noto Serif JP;
+        font-size: 24px;
+        font-weight: normal;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -325,6 +371,14 @@ body {
           width: 30px;
           height: 140px;
           border-right: 1px solid #fff;
+
+          @media screen and (max-width: 1024px) {
+            padding-right: 80px;
+          }
+
+          @media screen and (max-width: 640px) {
+            padding-right: 50px;
+          }
         }
       }
 
@@ -333,114 +387,60 @@ body {
         display: flex;
         align-items: center;
         height: 140px;
-        margin-left: 50px;
+        margin-left: 35px;
+
+        @media screen and (max-width: 640px) {
+          width: 60%;
+        }
       }
 
       &__contents {
         padding: 20px;
-        font: normal 14px/2 "Noto Serif JP";
+        font-family: Noto Serif JP;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 2;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 640px) {
+          font-size: 14px;
+        }
       }
 
       &__image {
+
         display: flex;
         justify-content: flex-end;
 
         &.reverse {
           justify-content: flex-start;
+
+          @media screen and (max-width: 1024px) {
+            display: flex;
+
+            img {
+              margin: 0px;
+              padding: 30px 0px;
+            }
+          }
         }
 
         img {
           width: 300px;
           justify-content: flex-end;
+          padding-top: 3%;
+
+          @media screen and (max-width: 640px) {
+            position: absolute;
+            bottom: 100px;
+            opacity: .2;
+            width: 100%;
+          }
         }
       }
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .forest__features__box {
-      padding: 60px;
-      margin-bottom: 0px;
-    }
-
-    .forest__features__container {
-
-      &:nth-of-type(2) .forest__features__contents {
-        flex-direction: column;
-
-        .forest__features__contents__img {
-          padding-left: 0px;
-          margin-left: -50px;
-        }
-      }
-    }
-
-    .forest__features__contents {
-      flex-direction: column;
-    }
-
-    .forest__features__contents__image {
-      width: 100%;
-      padding-right: 0px;
-      margin-bottom: 30px;
-    }
-
-    .forest__features__text__inner__header__number {
-      padding-right: 80px;
-    }
-
-    .forest__features__text__inner__image {
-
-      &.reverse {
-        display: flex;
-        //flex-direction: row-reverse;
-      }
-
-      img {
-        margin: 0px;
-        padding: 30px 0px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-
-    .forest__features__box {
-      padding: 3%;
-    }
-    .forest__what-is__image {
-      width: 100%;
-    }
-
-    .forest__what-is__text {
-      width: 100%;
-      text-align: left;
-    }
-
-    .forest__features__text__inner__title {
-      width: 60%;
-    }
-
-    .forest__features__text__inner__header__number {
-      padding-right: 50px;
-    }
-
-    .forest__features__image__bottom {
-      position: absolute;
-      bottom: 100px;
-      opacity: .2;
-    }
-
-    .forest__features__text__inner__image img {
-      width: 100%;
-    }
-
-    .forest__features__text__inner__image .reverse {
-      border: 1px solid red;
-    }
-
-    .forest__features__container {
-      position: relative;
     }
   }
 
@@ -461,6 +461,12 @@ body {
       align-items: center;
       column-gap: 3rem;
 
+      @media screen and (max-width: 1024px) {
+        margin-bottom: -3%;
+        padding: 3%;
+
+      }
+
       &::before {
         content: "";
         display: block;
@@ -469,7 +475,7 @@ body {
         height: 1px;
         background: #3e3e3e;
         position: absolute;
-        margin-top: -90px;
+        margin-top: -100px;
         margin-right: 20px;
       }
 
@@ -479,88 +485,145 @@ body {
       }
 
       h2 {
+        font-weight: normal;
         color: #3e3e3e;
-        margin-top: 50px;
+        margin-top: 30px;
+        font-family: Noto Serif JP;
+        font-size: 30px;
+        padding-bottom: 30px;
       }
     }
 
     &__wrap {
-      padding: 120px;
+      padding: 100px;
+      font-size: 16px;
+      font-family: "Noto Serif JP";
+      line-height: 2;
+
+      @media screen and (max-width: 1024px) {
+        padding: 3%;
+
+      }
+
+      @media screen and (max-width: 640px) {
+        padding: 3%;
+      }
     }
 
     &__contents {
       display: flex;
+      margin-top: -30px;
       margin-bottom: 70px;
       padding-bottom: 60px;
 
-      &.reverse {
-        flex-direction: row-reverse;
-
-        img {
-          margin-left: 100px;
-          object-fit: cover;
-        }
+      &__text__title {
+        margin-bottom: 50px;
+        font-size: 24px;
       }
 
-      img {
-        width: 40%;
+      @media screen and (max-width: 1024px) {
+        display: block;
+        margin-bottom: 0px;
+
+        &__box {
+          .forest__introduction__contents__text__title {
+            border-top: 1px solid #3e3e3e;
+            border-bottom: 1px solid #3e3e3e;
+            padding: 20px;
+  
+          }
+
+          .forest__introduction__contents__text__contents {
+
+            h3 {
+    
+
+            }
+          }
+        }
       }
 
       &__box {
-        padding-left: 30px;
-        font: normal 16px/2 "Noto Serif JP";
+        padding-left: 3%;
+        width: 40%;
+        @media screen and (max-width: 1024px) {
+          padding-left: 0px;
+          width: 100%;
+        }
+      }
 
-        .forest__introduction__contents__text__title {
+      &__text {
+        &__title {
           border-top: 1px solid #3e3e3e;
           border-bottom: 1px solid #3e3e3e;
           padding: 20px;
-        }
 
-        .forest__introduction__contents__text__contents {
-          padding: 20px;
+          @media screen and (max-width: 1024px) {
+            &__box {
+              .forest__introduction__contents__text__title {
+                border-top: 1px solid #3e3e3e;
+                border-bottom: 1px solid #3e3e3e;
+                padding: 20px;
 
-          h3 {
-            margin-bottom: 30px;
-          }
-        }
-      }
-    }
+              }
 
-    @media screen and (max-width: 1024px) {
-      .forest__container {
-        padding: 60px;
-        margin-bottom: -60px;
-      }
+              .forest__introduction__contents__text__contents {
+                padding: 20px;
 
-      
-      .forest__introduction__wrap {
-        padding: 3%;
-
-        @media screen and (max-width: 640px) {
-          .forest__introduction__wrap {
-            padding: 3%;
-            //border: 1px solid red;
-          }
-        }
-
-        .forest__introduction__contents {
-          flex-direction: column;
-          margin-bottom: 0px;
-
-          img {
-            width: 100%;
-          }
-
-          &.reverse {
-            img {
-              margin-left: 0px;
+                h3 {
+    
+                  margin-bottom: 30px;
+                
+                }
+              }
             }
           }
         }
 
+        &__contents {
+          h3 {
+            font-size: 24px;
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            padding-bottom: 50px;
+          }
+        }
+      }
+
+      img {
+        width: 55%;
+        object-fit: cover;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+
+      &.reverse {
+        flex-direction: row-reverse;
+
+        @media screen and (max-width: 1024px) {
+          flex-direction: row-reverse;
+
+          img {
+            padding-bottom: 10px;
+            width: 200px;
+            display: flex;
+            margin-left: 0px;
+            width: 100%;
+            object-fit: cover;
+
+          }
+        }
+
         .forest__introduction__contents__box {
-          margin-top: 30px;
-          padding-left: 0px;
+          padding-right: 3%;
+          padding-left: 0%;
+        }
+
+        img {
+          object-fit: cover;
+        
         }
       }
     }
@@ -569,12 +632,16 @@ body {
   //Works
   .forest__works {
     width: 100%;
-    height: 130vh;
+    height: 100vh;
     background-image: url(img/access-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     position: relative;
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
 
     .forest__container {
       padding-top: 100px;
@@ -594,7 +661,7 @@ body {
         height: 1px;
         background: #fff;
         position: absolute;
-        margin-top: -146px;
+        margin-top: -134px;
         margin-right: 20px;
       }
 
@@ -605,7 +672,10 @@ body {
 
       h2 {
         color: #fff;
-        margin-top: 50px;
+        margin-top: 30px;
+        font-family: Noto Serif JP;
+        font-size: 30px;
+        font-weight: normal;
       }
     }
 
@@ -767,7 +837,7 @@ body {
     }
 
     .forest__container {
-      padding: 60px;
+      padding: 3%;
     }
 
     .section-works__slider {
@@ -792,7 +862,7 @@ body {
 
   @media screen and (max-width: 640px) {
     .forest__works {
-      height: 120vh;
+      height: 110vh;
     }
 
     .forest__container {
@@ -859,7 +929,10 @@ body {
 
       h2 {
         color: #fff;
-        margin-top: 50px;
+        margin-top: 30px;
+        font-family: Noto Serif JP;
+        font-size: 30px;
+        font-weight: normal;
       }
     }
 
@@ -921,6 +994,7 @@ body {
       margin: auto;
       justify-content: space-between;
       align-items: center;
+
     }
 
     &__header {
@@ -945,7 +1019,10 @@ body {
 
       h2 {
         color: #fff;
-        margin-top: 50px;
+        margin-top: 30px;
+        font-family: Noto Serif JP;
+        font-size: 30px;
+        font-weight: normal;
       }
     }
 
@@ -956,11 +1033,14 @@ body {
 
     &__post {
 
+
       &__pic {
+        
         img {
-          width: 300px;
+          width: 90%;
           height: 350px;
           object-fit: cover;
+
         }
       }
 
@@ -969,8 +1049,13 @@ body {
         font: normal 14px/2 "Noto Serif JP";
         padding-top: 20px;
 
+        h3 {
+          font-weight: normal;
+        }
+
         h4 {
           font: bold 16px/2 "Noto Serif JP";
+          font-weight: normal;
         }
 
         p {
@@ -984,19 +1069,18 @@ body {
     }
 
     @media screen and (max-width: 1024px) {
-      
+
       .forest__staff__container {
-        padding: 60px;
+        padding: 3%;
       }
 
       .forest__staff__wrapper {
         display: flex;
         overflow: hidden;
-        padding-right: 20px;
+        gap: 20px;
       }
 
       .forest__staff__post {
-        margin-left: 20px;
         object-fit: cover;
       }
 
@@ -1009,7 +1093,7 @@ body {
       .forest__staff__container {
         padding: 3%;
       }
-      
+
       .forest__staff__wrapper {
         display: block;
         padding-right: 0px;
@@ -1046,6 +1130,13 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
 
+      @media screen and (max-width: 768px) {
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        }
+      
+
       &__map {
         width: 100%;
         height: 750px;
@@ -1053,10 +1144,10 @@ body {
 
       &__txt {
         margin-left: 20px;
-        padding: 64px 0 64px 80px;
+        padding: 50px 0 64px 50px;
 
         &__header {
-          padding-bottom: 50px;
+          padding-bottom: 30px;
           margin-top: 30px;
 
           &::before {
@@ -1078,7 +1169,10 @@ body {
 
           h2 {
             color: #fff;
-            margin-top: 50px;
+            margin-top: 20px;
+            font-family: Noto Serif JP;
+            font-size: 30px;
+            font-weight: normal;
           }
         }
 
@@ -1089,6 +1183,7 @@ body {
         &__img {
           margin-top: 20px;
           width: 400px;
+
           @media screen and (max-width: 640px) {
             &__img {
               margin-top: 20px;
@@ -1125,6 +1220,7 @@ body {
       border: 1px solid red;
       height: 300px;
     }
+
     .forest__access__container__txt__img {
       width: 100%;
     }
@@ -1139,10 +1235,25 @@ body {
       align-items: center;
       justify-content: center;
       padding-top: 100px;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
     }
 
     &__logo {
       margin-right: 200px;
+
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
 
       &__img {
         width: 200px;
@@ -1155,10 +1266,21 @@ body {
       padding-left: 10%;
       margin-left: 50px;
 
+      @media screen and (max-width: 1024px) {
+        margin-top: 50px;
+        padding-left: 0px;
+        margin-left: 0px;
+      }
+
       &__list {
         display: flex;
         align-items: center;
         gap: 30px;
+
+        @media screen and (max-width: 1024px) {
+         flex-direction: column;
+        }
+
       }
 
       &__item {
@@ -1167,6 +1289,7 @@ body {
         a {
           font: bold 16px/2 "Noto Serif JP";
           color: #343c3a;
+          font-weight: normal;
         }
       }
     }
@@ -1177,55 +1300,14 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family : "Noto Serif JP";
-      font-size: 1rem;
+      font-family: "Noto Serif JP";
+      font-size: 16px;
+      font-weight: normal;
       color: #343c3a;
-    }
-  }
 
-  @media screen and (max-width: 1024px) {
-
-    .forest__footer__container {
-      flex-direction: column;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .forest__footer__logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-    }
-
-    .forest__footer__nav {
-      margin-top: 50px;
-      padding-left: 0px;
-      margin-left: 0px;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-
-    .forest__footer__logo {
-      margin-bottom: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      padding-bottom: 20px;
-    }
-
-    .forest__footer__nav {
-      margin: 0 auto;
-    }
-
-    .forest__footer__nav__list {
-      flex-direction: column;
-    }
-    .forest__footer__copy {
-      font-size: 0.5rem;
+      @media screen and (max-width: 640px) {
+        font-size: 14px
+      }
     }
   }
 }
