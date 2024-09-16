@@ -47,7 +47,7 @@ header {
   &__list {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
   }
 
   &__item {
@@ -106,6 +106,7 @@ header {
 }
 
 body {
+
   //main
   .forest__main {
     width: 100%;
@@ -141,13 +142,24 @@ body {
     background-size: cover;
     box-sizing: border-box;
     background-position: center;
+    overflow: hidden;
 
     .forest__container {
+      padding: 3% 0;
       max-width: 1200px;
       margin: auto;
       display: flex;
       align-items: center;
       column-gap: 3rem;
+
+      @media screen and (max-width: 1024px) {
+        padding: 8% 4%;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 8% 3%;
+        gap: 0;
+      }
 
       @media screen and (max-width: 640px) {
         display: flex;
@@ -157,8 +169,7 @@ body {
     }
 
     &__text {
-      padding-left: 2%;
-      width: 100%;
+      width: 50%;
       color: #fff;
 
       @media screen and (max-width: 1024px) {
@@ -169,6 +180,12 @@ body {
         padding: 0px;
         width: 100%;
         text-align: left;
+        position: relative;
+        z-index: 1;
+      }
+
+      @media screen and (max-width: 425px) {
+        padding: 3% 0px;
       }
 
       &::before {
@@ -192,19 +209,40 @@ body {
         color: #fff;
         margin-top: 50px;
         font-family: Noto Serif JP;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: normal;
 
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 425px) {
+          font-size: 18px;
+        }
       }
 
       p {
         margin-top: 50px;
-        font: normal 15px/2 "Noto Serif JP";
+        font-family: Noto Serif JP;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 2;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 425px) {
+          font-size: 12px;
+        }
       }
     }
 
     &__image {
-      width: 100%;
+      width: calc(50% + 200px);
+      margin-right: -200px;
+
+
 
       @media screen and (max-width: 1024px) {
         //margin-right: 45px;
@@ -212,15 +250,23 @@ body {
 
       @media screen and (max-width: 640px) {
         width: 100%;
+        position: relative;
       }
 
       &__img {
         width: 100%;
         padding: 4%;
 
-
         @media screen and (max-width: 1024px) {
           width: 80%;
+        }
+
+        @media screen and (max-width: 640px) {
+          top: 0;
+          left: 0;
+          position: absolute;
+          z-index: 0;
+          opacity: .5;
         }
       }
     }
@@ -233,7 +279,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    display: inline-block;
+    overflow: hidden;
 
     &__box {
       max-width: 1200px;
@@ -263,24 +309,45 @@ body {
         position: absolute;
         margin-top: 10px;
         margin-right: 20px;
+        @media screen and (max-width: 425px) {
+          margin-top: 15px;
+        }
+      
+
       }
 
       span {
         color: white;
         margin-left: 70px;
+
+        @media screen and (max-width: 425px) {
+          font-size: 16px;
+        }
       }
 
       h2 {
         color: #fff;
         margin-top: 30px;
         font-family: Noto Serif JP;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: normal;
+
+        @media screen and (max-width: 425px) {
+          font-size: 18px;
+        }
       }
     }
 
     &__header {
       margin-bottom: 60px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 425px) {
+        margin-bottom: 3%;
+      }
     }
 
     &__container {
@@ -298,21 +365,52 @@ body {
           flex-direction: row-reverse;
 
           @media screen and (max-width: 1024px) {
+            //flex-direction: column;
+          }
+
+          @media screen and (max-width: 768px) {
             flex-direction: column;
           }
 
           .forest__features__contents__img {
-            padding-left: 50px;
 
             @media screen and (max-width: 1024px) {
               padding-left: 0px;
             }
 
             .forest__features__contents__image {
-              object-fit: contain;
+              object-fit: cover;
               position: relative;
               top: 0px;
+              margin-left: 360px;
+
+              @media screen and (max-width: 768px) {
+                margin-left: 0px;
+              }
             }
+          }
+
+          .forest__features__contents__text {
+            width: 53%;
+            margin-right: 40px;
+            padding: 0px;
+            padding-right: 30px;
+
+            @media screen and (max-width: 768px) {
+              width: 100%;
+              padding-right: 0;
+            }
+
+            &.reverse {
+              margin-left: -100px;
+
+              @media screen and (max-width: 768px) {
+                margin-left: 0;
+              }
+            }
+
+            // width: calc(60% - 360px);
+            // margin-right: 360px;
           }
         }
       }
@@ -323,12 +421,19 @@ body {
       position: relative;
       padding-bottom: 50px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 768px) {
         flex-direction: column;
       }
 
       &__img {
-        width: 100%;
+        width: 50%;
+        width: calc(40% + 360px);
+        margin-left: -360px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin-left: 0;
+        }
       }
 
       &__image {
@@ -339,19 +444,39 @@ body {
           padding-right: 0px;
           margin-bottom: 30px;
         }
+
+        @media screen and (max-width: 640px) {
+          z-index: 3;
+          position: relative;
+        }
+
+        @media screen and (max-width: 425px) {
+          margin-bottom: 3%;
+        }
       }
 
       &__text {
+        width: 60%;
+        margin-left: 50px;
 
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          position: relative;
+          z-index: 2;
+        }
       }
     }
 
     &__text__inner {
-      padding-left: 5%;
+      padding-left: 13%;
+
       @media screen and (max-width: 1024px) {
         padding-left: 0%;
       }
-
 
       &__header {
         font-family: Noto Serif JP;
@@ -359,54 +484,72 @@ body {
         font-weight: normal;
         display: flex;
         align-items: center;
-        justify-content: center;
         border-bottom: 1px solid #fff;
 
         &__number {
-          width: 100%;
-          padding-right: 50px;
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 30px;
-          height: 140px;
-          border-right: 1px solid #fff;
+          margin-left: 10px;
+          margin-bottom: 10px;
 
           @media screen and (max-width: 1024px) {
-            padding-right: 80px;
+            // padding-right: 80px;
           }
 
           @media screen and (max-width: 640px) {
             padding-right: 50px;
           }
+
+          @media screen and (max-width: 425px) {
+            padding-right: 4%;
+            font-size: 18px;
+          }
         }
       }
 
       &__title {
-        width: 70%;
+        width: 100%;
         display: flex;
         align-items: center;
-        height: 140px;
+        border-left: 1px solid #fff;
         margin-left: 35px;
+        padding: 20px 20px 30px 30px;
 
         @media screen and (max-width: 640px) {
           width: 60%;
         }
+
+        @media screen and (max-width: 425px) {
+          margin-left: 0;
+          width: 100%;
+          font-size: 16px;
+          padding: 3% 3% 3% 3%;
+        }
       }
 
       &__contents {
-        padding: 20px;
+        padding-top: 5%;
         font-family: Noto Serif JP;
         font-size: 16px;
         font-weight: normal;
         line-height: 2;
 
         @media screen and (max-width: 1024px) {
-          font-size: 20px;
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          flex-direction: column;
         }
 
         @media screen and (max-width: 640px) {
           font-size: 14px;
+        }
+
+        @media screen and (max-width: 425px) {
+          font-size: 12px;
         }
       }
 
@@ -418,6 +561,7 @@ body {
         &.reverse {
           justify-content: flex-start;
 
+
           @media screen and (max-width: 1024px) {
             display: flex;
 
@@ -426,18 +570,30 @@ body {
               padding: 30px 0px;
             }
           }
+
+          @media screen and (max-width: 768px) {
+            justify-content: flex-end;
+          }
+
+
         }
 
         img {
-          width: 300px;
+          width: 60%;
           justify-content: flex-end;
-          padding-top: 3%;
+          padding: 20% 0;
+
+          @media screen and (max-width: 768px) {
+            padding: 4% 0;
+          }
 
           @media screen and (max-width: 640px) {
             position: absolute;
             bottom: 100px;
-            opacity: .2;
+            opacity: .4;
             width: 100%;
+            z-index: -1;
+
           }
         }
       }
@@ -450,7 +606,7 @@ body {
     background: #fff;
     color: #3e3e3e;
     position: relative;
-    display: inline-block;
+    overflow: hidden;
 
     .forest__container {
       padding-top: 100px;
@@ -464,7 +620,6 @@ body {
       @media screen and (max-width: 1024px) {
         margin-bottom: -3%;
         padding: 3%;
-
       }
 
       &::before {
@@ -477,6 +632,13 @@ body {
         position: absolute;
         margin-top: -100px;
         margin-right: 20px;
+        @media screen and (max-width: 625px) {
+          margin-top: -90px;
+        }
+
+        @media screen and (max-width: 425px) {
+          margin-top: -60px;
+        }
       }
 
       span {
@@ -489,20 +651,25 @@ body {
         color: #3e3e3e;
         margin-top: 30px;
         font-family: Noto Serif JP;
-        font-size: 30px;
+        font-size: 32px;
         padding-bottom: 30px;
+
+        @media screen and (max-width: 425px) {
+          font-size: 18px;
+          padding-bottom: 0;
+        }
       }
     }
 
     &__wrap {
-      padding: 100px;
+      max-width: 1200px;
+      margin: 0 auto;
       font-size: 16px;
       font-family: "Noto Serif JP";
       line-height: 2;
 
       @media screen and (max-width: 1024px) {
         padding: 3%;
-
       }
 
       @media screen and (max-width: 640px) {
@@ -512,17 +679,42 @@ body {
 
     &__contents {
       display: flex;
-      margin-top: -30px;
-      margin-bottom: 70px;
-      padding-bottom: 60px;
+      padding-bottom: 5%;
+      width: 100%;
+      margin-bottom: 8%;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        ;
+      }
+
+      &__img {
+        width: calc(40% + 360px);
+        margin-left: -360px;
+        //padding-right: 5%;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin-left: 0;
+          padding-bottom: 10px;
+        }
+      }
+
+      &__box {
+        width: 70%;
+
+      }
 
       &__text__title {
         margin-bottom: 50px;
         font-size: 24px;
+        @media screen and (max-width: 425px) {
+          margin-bottom: 5%;
+        }
       }
 
       @media screen and (max-width: 1024px) {
-        display: block;
+
         margin-bottom: 0px;
 
         &__box {
@@ -530,25 +722,30 @@ body {
             border-top: 1px solid #3e3e3e;
             border-bottom: 1px solid #3e3e3e;
             padding: 20px;
-  
+            @media screen and (max-width: 425px) {
+              padding: 3%;
+              font-size: 18px;
+            }
+            
           }
 
           .forest__introduction__contents__text__contents {
 
-            h3 {
-    
-
-            }
+            h3 {}
           }
         }
       }
 
       &__box {
-        padding-left: 3%;
-        width: 40%;
+        padding-left: 5%;
+
         @media screen and (max-width: 1024px) {
-          padding-left: 0px;
+          //padding-left: 0px;
           width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+          padding-left: 0px;
         }
       }
 
@@ -564,16 +761,13 @@ body {
                 border-top: 1px solid #3e3e3e;
                 border-bottom: 1px solid #3e3e3e;
                 padding: 20px;
-
               }
 
               .forest__introduction__contents__text__contents {
                 padding: 20px;
 
                 h3 {
-    
                   margin-bottom: 30px;
-                
                 }
               }
             }
@@ -581,50 +775,93 @@ body {
         }
 
         &__contents {
+
           h3 {
             font-size: 24px;
             font-family: "Noto Serif JP";
             font-weight: normal;
             padding-bottom: 50px;
+
+            @media screen and (max-width: 425px) {
+              font-size: 16px;
+              padding-bottom: 5%;
+            }
+          }
+          p {
+     
+            @media screen and (max-width: 425px) {
+              font-size: 12px;
+    
+            }
           }
         }
       }
 
-      img {
-        width: 55%;
-        object-fit: cover;
+      // img {
+      //   width: 50%;
+      //   object-fit: cover;
 
-        @media screen and (max-width: 1024px) {
-          width: 100%;
-        }
-      }
+      //   @media screen and (max-width: 1024px) {
+      //     width: 100%;
+      //   }
+      // }
 
       &.reverse {
         flex-direction: row-reverse;
+        width: 100%;
+
+        .forest__introduction__contents__img {
+          width: calc(40% + 360px);
+          margin-right: -360px;
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+        }
 
         @media screen and (max-width: 1024px) {
           flex-direction: row-reverse;
 
           img {
             padding-bottom: 10px;
-            width: 200px;
             display: flex;
             margin-left: 0px;
-            width: 100%;
+            width: 40%;
             object-fit: cover;
+          }
+        }
 
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+
+          img {
+            width: 100%;
           }
         }
 
         .forest__introduction__contents__box {
           padding-right: 3%;
-          padding-left: 0%;
+          width: 100%;
+          margin-right: 17%;
+          padding-right: 17%;
+
+          @media screen and (max-width: 1024px) {
+            margin-right: 2%;
+            padding-right: 3%;
+          }
+
+          @media screen and (max-width: 768px) {
+            margin-right: 2%;
+            padding-right: 0%;
+          }
         }
 
-        img {
-          object-fit: cover;
-        
-        }
+        // img {
+        //   object-fit: cover;
+
+        //   width: calc(40% + 360px);
+        //   margin-right: -360px;
+        // }
       }
     }
   }
@@ -632,12 +869,20 @@ body {
   //Works
   .forest__works {
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     background-image: url(img/access-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     position: relative;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
 
     @media screen and (max-width: 640px) {
       display: none;
@@ -674,7 +919,7 @@ body {
         color: #fff;
         margin-top: 30px;
         font-family: Noto Serif JP;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: normal;
       }
     }
@@ -683,7 +928,8 @@ body {
       //border: 1px solid blue;
       margin: 0px auto;
       position: relative;
-      bottom: 25%;
+      padding-bottom: 150px;
+      margin-top: -125px;
     }
 
     .section-works__slider {
@@ -710,11 +956,13 @@ body {
     .section-works__slider .slide-arrow.next-arrow {
       right: calc((100% - 1070px) / 2);
       background: url(img/icon_arw_next.svg) no-repeat center center / contain;
+      bottom: 120px;
     }
 
     .section-works__slider .slide-arrow.prev-arrow {
       right: calc((100% - 920px) / 2);
       background: url(img/icon_arw_prev.svg) no-repeat center center / contain;
+      bottom: 120px;
     }
 
     .section-works__slider .slide-arrow.slick-disabled {
@@ -774,11 +1022,11 @@ body {
       opacity: .5;
 
       &.slick-slide {
-        transition: 0.5s;
+        //transition: 0.5s;
 
         &.slick-current {
-          transform: scale(1.3);
-          opacity: 1.4;
+          // transform: scale(1.3);
+          // opacity: 1.4;
         }
       }
 
@@ -905,7 +1153,21 @@ body {
       justify-content: space-between;
       align-items: center;
       column-gap: 3rem;
-      margin-bottom: 100px;
+      margin-bottom: 60px;
+
+      @media screen and (max-width: 1024px) {
+          padding: 4%;
+          margin-bottom: 0px;
+      }
+  
+      @media screen and (max-width: 640px) {
+          margin-bottom: 0px;
+          padding: 3%;
+      }
+      @media screen and (max-width: 425px) {
+        margin-bottom: 10%;
+  
+    }
     }
 
     &__header {
@@ -932,54 +1194,56 @@ body {
         color: #fff;
         margin-top: 30px;
         font-family: Noto Serif JP;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: normal;
+        @media screen and (max-width: 425px) {
+          font-size: 18px;
+        
+        }
       }
     }
 
     &__table {
       width: 100%;
       border-top: 1px solid #fff;
+      margin-top: 30px;
 
       &__row {
         display: flex;
         border-bottom: 1px solid #fff;
         color: #fff;
-        font: normal 17px/2 "Noto Serif JP";
+        font-family: Noto Serif JP;
+        font-size: 16px;
+        line-height: 2;
+        padding: 3% 0px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          line-height: 2;
+        }
+
+        @media screen and (max-width: 640px) {
+          font-size: 14px;
+          line-height: 2;
+        }
+        @media screen and (max-width: 425px) {
+          font-size: 12px;
+        }
 
         &__title {
-          padding: 20px;
           width: 150px;
+          @media screen and (max-width: 640px) {
+            width: 100px;
+          }
+          @media screen and (max-width: 425px) {
+            width: 70px;
+          }
         }
 
-        &__contents {
-          padding: 20px;
-        }
+        &__contents {}
       }
     }
 
-    @media screen and (max-width: 1024px) {
-      .forest__company__container {
-        padding: 60px;
-        margin-bottom: 0px;
-      }
-    }
-
-    @media screen and (max-width: 640px) {
-
-      .forest__company__container {
-        margin-bottom: 0px;
-        padding: 3%;
-      }
-
-      .forest__company__table__row__title {
-        width: 100px;
-      }
-
-      .forest__company__table__row {
-        font: normal 13px/2 "Noto Serif JP";
-      }
-    }
   }
 
   //Staff
@@ -990,12 +1254,11 @@ body {
 
     &__container {
       padding-top: 40px;
-      padding-bottom: 100px;
+      padding-bottom: 130px;
       max-width: 1200px;
       margin: auto;
       justify-content: space-between;
       align-items: center;
-
     }
 
     &__header {
@@ -1022,25 +1285,42 @@ body {
         color: #fff;
         margin-top: 30px;
         font-family: Noto Serif JP;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: normal;
+
+        @media screen and (max-width: 425px) {
+          font-size: 18px;
+        }
       }
     }
 
     &__wrapper {
       display: flex;
       justify-content: space-between;
+
     }
 
     &__post {
 
 
       &__pic {
-        
+
         img {
           width: 90%;
           height: 350px;
           object-fit: cover;
+
+          @media screen and (max-width: 1024px) {
+            height: 300px;
+          }
+
+          @media screen and (max-width: 768px) {
+            height: 240px;
+          }
+
+          @media screen and (max-width: 640px) {
+            height: 300px;
+          }
 
         }
       }
@@ -1087,6 +1367,10 @@ body {
 
       .forest__staff__post__pic__img {
         width: 100%;
+
+        @media screen and (max-width: 640px) {
+          height: 400px;
+        }
       }
     }
 
@@ -1125,27 +1409,50 @@ body {
     background-size: cover;
     color: #fff;
     position: relative;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      height: 100%;
+    }
 
     &__container {
       display: flex;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      //flex-direction: column;
 
       @media screen and (max-width: 768px) {
-        display: flex;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        }
-      
-
-      &__map {
-        width: 100%;
-        height: 750px;
+        flex-direction: column;
       }
 
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        height: 100%;
+      }
+
+      &__map {
+        width: 50%;
+        height: 750px;
+
+        @media screen and (max-width: 1024px) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          height: 500px;
+        }
+        @media screen and (max-width: 640px) {
+          width: 100%;
+        }
+      }
+
+
       &__txt {
-        margin-left: 20px;
-        padding: 50px 0 64px 50px;
+        padding: 50px 0 64px 80px;
+
+        @media screen and (max-width: 1024px) {
+          padding: 30px;
+        }
 
         &__header {
           padding-bottom: 30px;
@@ -1172,58 +1479,39 @@ body {
             color: #fff;
             margin-top: 20px;
             font-family: Noto Serif JP;
-            font-size: 30px;
+            font-size: 32px;
             font-weight: normal;
+            @media screen and (max-width: 425px) {
+              font-size: 18px;
+            }
           }
         }
 
         p {
-          font: normal 14px/2 "Noto Serif JP";
+          font-family: Noto Serif JP;
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 2;
+
+          @media screen and (max-width: 425px) {
+            font-size: 12px;
+          }
         }
 
         &__img {
           margin-top: 20px;
           width: 400px;
 
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+
           @media screen and (max-width: 640px) {
-            &__img {
-              margin-top: 20px;
-              width: 100%;
-            }
+            margin-top: 20px;
+            width: 100%;
           }
         }
       }
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .forest__access {
-      width: 100%;
-      height: 100%;
-    }
-
-    .forest__access__container__txt {
-      padding: 30px;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-
-    .forest__access__container__txt {
-      margin-left: 0px;
-    }
-
-    .forest__access__container {
-      grid-template-columns: 1fr;
-    }
-
-    .forest__access__container__map {
-      border: 1px solid red;
-      height: 300px;
-    }
-
-    .forest__access__container__txt__img {
-      width: 100%;
     }
   }
 
@@ -1234,7 +1522,7 @@ body {
     &__container {
       display: flex;
       align-items: center;
-      justify-content: center;
+      //justify-content: center;
       padding-top: 100px;
 
       @media screen and (max-width: 1024px) {
@@ -1243,7 +1531,6 @@ body {
         align-items: center;
         justify-content: center;
       }
-
     }
 
     &__logo {
@@ -1257,6 +1544,7 @@ body {
       }
 
       &__img {
+        margin-left: 20%;
         width: 200px;
       }
     }
@@ -1279,9 +1567,8 @@ body {
         gap: 30px;
 
         @media screen and (max-width: 1024px) {
-         flex-direction: column;
+          flex-direction: column;
         }
-
       }
 
       &__item {
@@ -1296,7 +1583,7 @@ body {
     }
 
     .forest__footer__copy {
-      margin-top: 80px;
+      margin-top: 200px;
       padding-bottom: 100px;
       display: flex;
       align-items: center;
@@ -1308,6 +1595,12 @@ body {
 
       @media screen and (max-width: 640px) {
         font-size: 14px
+      }
+      @media screen and (max-width: 425px) {
+        font-size: 12px;
+        margin-top: 10%;
+        padding-bottom: 5%;
+
       }
     }
   }
