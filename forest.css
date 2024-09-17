@@ -25,6 +25,11 @@ header {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 640px) {
+  header {
+    z-index: 5;
+  }
+}
 header .logo {
   margin-left: 20px;
   max-width: 100%;
@@ -50,6 +55,14 @@ header .logo__img {
     background: rgba(0, 0, 0, 0.6);
     align-items: center;
     justify-content: center;
+  }
+  .forest__nav.show {
+    right: 0 !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .forest__nav {
+    background: rgba(0, 0, 0, 0.6);
   }
   .forest__nav.show {
     right: 0 !important;
@@ -487,7 +500,7 @@ body .forest__features__text__inner__header__number {
 }
 @media screen and (max-width: 640px) {
   body .forest__features__text__inner__header__number {
-    padding-right: 50px;
+    padding-right: 0;
   }
 }
 @media screen and (max-width: 425px) {
@@ -506,7 +519,7 @@ body .forest__features__text__inner__title {
 }
 @media screen and (max-width: 640px) {
   body .forest__features__text__inner__title {
-    width: 60%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 425px) {

@@ -25,6 +25,9 @@ header {
   position: fixed;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 640px) {
+    z-index: 5;
+  }
 
   .logo {
     margin-left: 20px;
@@ -36,8 +39,6 @@ header {
     }
   }
 }
-
-
 
 .forest__nav {
   display: flex;
@@ -53,6 +54,14 @@ header {
     background: rgba(0, 0, 0, .6);
     align-items: center;
     justify-content: center;
+
+    &.show {
+          right: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    background: rgba(0, 0, 0, .6);
 
     &.show {
           right: 0 !important;
@@ -509,7 +518,7 @@ body {
           }
 
           @media screen and (max-width: 640px) {
-            padding-right: 50px;
+            padding-right: 0;
           }
 
           @media screen and (max-width: 425px) {
@@ -528,7 +537,7 @@ body {
         padding: 20px 20px 30px 30px;
 
         @media screen and (max-width: 640px) {
-          width: 60%;
+          width: 100%;
         }
 
         @media screen and (max-width: 425px) {
