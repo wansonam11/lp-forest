@@ -11,6 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <meta content="yes" name="apple-mobile-web-app-capable" />
   <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+  <script defer src="forest.js"></script>
   </script>
   <title>Forest Page</title>
 </head>
@@ -21,28 +22,28 @@
   <div class="forest__nav">
     <ul class="forest__nav__list">
       <li class="forest__nav__item">
-        <a class="forest__nav__item__link" href="#">私たちについて</a>
+        <a class="forest__nav__item__link" href="#forest__what-is">私たちについて</a>
       </li>
       <li class="forest__nav__item">
-        <a class="forest__nav__item__link" href="#">特徴</a>
+        <a class="forest__nav__item__link" href="#forest__features">特徴</a>
       </li>
       <li class="forest__nav__item">
-        <a class="forest__nav__item__link" href="#">事業紹介</a>
+        <a class="forest__nav__item__link" href="#forest__introduction">事業紹介</a>
       </li>
       <li class="forest__nav__item">
-        <a class="forest__nav__item__link" href="#">施工実績</a>
+        <a class="forest__nav__item__link" href="#forest__works">施工実績</a>
       </li>
       <li class="forest__nav__item">
-        <a class="forest__nav__item__link" href="#">会社概要</a>
+        <a class="forest__nav__item__link" href="#forest__company">会社概要</a>
       </li>
       <li class="forest__nav__item">
         <a class="forest__nav__item__link" href="#">お問い合わせ</a>
       </li>
     </ul>
   </div>
-  <!-- <div class="forest__nav__toggle" id="forest__nav__toggle">
+  <div class="forest__nav__toggle" id="forest__nav__toggle">
     <img class="forest__nav__toggle__ham" alt="hamburger" src="img/ham.png" />
-  </div> -->
+  </div>
 </header>
 
 <body>
@@ -54,7 +55,7 @@
   </section>
 
   <!-- what is -->
-  <section class="forest__what-is">
+  <section class="forest__what-is" id="forest__what-is">
     <div class="forest__container">
       <div class="forest__what-is__text">
         <span>What is</span>
@@ -74,7 +75,7 @@
   </section>
 
   <!-- Features -->
-  <section class="forest__features">
+  <section class="forest__features" id="forest__features">
     <div class="forest__features__box">
       <div class="forest__features__header">
         <span>Features</span>
@@ -193,7 +194,7 @@
   </section>
 
   <!-- Business Introduction -->
-  <section class="forest__introduction">
+  <section class="forest__introduction" id="forest__introduction">
     <div class="forest__container">
       <div class="forest__introduction__header">
         <span>Business introduction</span>
@@ -264,7 +265,7 @@
   </section>
 
   <!-- Works -->
-  　<section class="forest__works">
+  　<section class="forest__works" id="forest__works">
     <div class="forest__container">
       <div class="forest__features__header">
         <span>Works</span>
@@ -314,7 +315,7 @@
   </section>
 
   <!-- Company -->
-  <section class="forest__company">
+  <section class="forest__company" id="forest__company">
     <div class="forest__company__container">
       <div class="forest__company__header">
         <span>Company</span>
@@ -462,73 +463,6 @@
 </footer>
 
 <!-- script -->
-<script>
-  $(function () {
-    let slider = $(".section-works__slider").slick({
-      arrows: true,
-      infinite: true,
-      loop: true,
-      prevArrow: '<div class="slide-arrow prev-arrow"></div>',
-      nextArrow: '<div class="slide-arrow next-arrow"></div>',
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      centerMode: false,
-      speed: 500,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      variableWidth: true,
-      centerMode: true,
-      customPaging: function (slider, i) {
-        let slideNumber = i.toString().padStart(2, "0");
-        return $('<div class="section-works__slider__dots__num">').text(slideNumber);
-      },
-      dotsClass: "section-works__slider__dots",
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 640,
-          settings: {
-            slidesToShow: 1,
-            centerMode: true,
-            variableWidth: false,
-            centerPadding: "6%",
-          },
-        },
-      ],
-    });
 
-    function setActiveDot(index) {
-      $(".section-works__slider__dots__num").removeClass("slick-active");
-      for (let i = 0; i <= index; i++) {
-        $(".section-works__slider__dots__num").eq(i).addClass("slick-active");
-      }
-    }
-
-    slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-      if (currentSlide === slick.$slides.length - 1 && nextSlide === 0) {
-        $(".section-works__slider__dots__num").addClass("no-transition").removeClass("slick-active");
-      } else if (currentSlide === 0 && nextSlide === slick.$slides.length - 1) {
-        $(".section-works__slider__dots__num").addClass("no-transition");
-        setActiveDot(nextSlide);
-      } else {
-        setActiveDot(nextSlide);
-      }
-    });
-
-    slider.on("afterChange", function (event, slick, currentSlide) {
-      if (currentSlide === 0) {
-        setTimeout(function () {
-          $(".section-works__slider__dots__num").removeClass("no-transition");
-          setActiveDot(currentSlide);
-        }, 0);
-      } else if (currentSlide === slick.$slides.length - 1) {
-        setTimeout(function () {
-          $(".section-works__slider__dots__num").removeClass("no-transition");
-        }, 0);
-      }
-    });
-    setActiveDot(0);
-  });
-</script>
 
 </html>
