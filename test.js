@@ -1,7 +1,6 @@
-
 // function toggleMenu() {
 //     var menuText = document.getElementById("ham-menu-text");
-    
+
 //     if (menuText.innerHTML === "MENU") {
 //         menuText.innerHTML = "CLOSE";
 //     } else {
@@ -26,14 +25,16 @@ function toggleMenu() {
   const navMenu = document.getElementsByClassName("forest__nav");
 
   // navMenu.classList.add('show');
-  for(var i = 0; i < navMenu.length; ++i) navMenu[i].classList.toggle('show');
+  for (var i = 0; i < navMenu.length; ++i) navMenu[i].classList.toggle("show");
 }
 
 function hamburger() {
   const navBar = document.getElementById("forest__nav__toggle");
-  if (!navBar){ return false;}
-  navBar.addEventListener('click', () => {
-   toggleMenu();
+  if (!navBar) {
+    return false;
+  }
+  navBar.addEventListener("click", () => {
+    toggleMenu();
   });
 
   const navLinkList = document.querySelectorAll(".forest__nav__list");
@@ -41,6 +42,3 @@ function hamburger() {
 }
 
 hamburger();
-
-
-

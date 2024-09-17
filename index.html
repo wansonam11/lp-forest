@@ -12,6 +12,7 @@
   <meta content="yes" name="apple-mobile-web-app-capable" />
   <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
   <script defer src="forest.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   </script>
   <title>Forest Page</title>
 </head>
@@ -472,6 +473,21 @@
 </footer>
 
 <!-- script -->
+<script>
+  const scrollReveal = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2000,
+  delay: 200,
+});
 
+scrollReveal.reveal(".forest__what-is, .forest__features");
+scrollReveal.reveal(".forest__introduction, .forest__company, .forest__works", {
+  delay: 200,
+});
+scrollReveal.reveal('.forest__footer, .forest__access, .forest__staff"', {
+  interval: 200,
+});
+</script>
 
 </html>
