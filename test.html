@@ -9,13 +9,26 @@
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://kit.fontawesome.com/b4c3ff631b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="slick.css" />
+  <script defer src="test.js"></script>
 </head>
 
 <body>
-    <div class="post">
-      <div class="post_bk">
-
+  <div class="post">
+    <div class="post__bk">
+      <div class="forest__nav__toggle" id="forest__nav__toggle">
+        <img class="forest__nav__toggle__ham" alt="hamburger" src="img/ham.png" />
+      </div>
+      <div class="ham-menu on">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="ham-menu-text" id="ham-menu-text"  onclick="toggleMenu()">
+          <p class="menu">MENU</p>
+          <p class="close">CLOSE</p>
+        </div>
       </div>
     </div>
+  </div>
 </body>
+
 </html>

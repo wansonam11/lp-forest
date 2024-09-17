@@ -107,8 +107,43 @@ header .logo__img {
 }
 @media screen and (max-width: 1024px) {
   .forest__nav__toggle {
-    right: 4vw;
-    display: block;
+    width: 80px;
+    height: 80px;
+  }
+  .forest__nav__toggle span {
+    position: absolute;
+    height: 2px;
+    background: #fff;
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  .forest__nav__toggle span:nth-last-child(2) {
+    height: 2px;
+    background: #fff;
+    width: 50px;
+    margin-bottom: 30px;
+  }
+  .forest__nav__toggle span:nth-last-child(3) {
+    height: 2px;
+    background: #fff;
+    width: 50px;
+    margin-bottom: 50px;
+  }
+  .forest__nav__toggle .ham-menu-text {
+    top: 13px;
+    position: relative;
+  }
+  .forest__nav__toggle .ham-menu-text p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Noto Serif JP;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .forest__nav__toggle .ham-menu-text .close {
+    display: none;
   }
 }
 .forest__nav__toggle__ham {

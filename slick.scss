@@ -11,14 +11,63 @@ li {
 }
 
 .post {
-
-
-  .post_bk {
+  &__bk {
     width: 80%;
     height: 80vh;
     background-image: url(img/pic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+}
+
+.ham-menu {
+  border: 1px solid red;
+  span {
+    margin: 0 auto;
+    position: absolute;
+    height: 2px;
+    background: #fff;
+    width: 80px;
+  }
+
+  span:nth-last-child(2){
+    //position: absolute;
+    height: 2px;
+    background: #fff;
+    width: 80px;
+    margin-top: 20px;
+  }
+
+  span:nth-last-child(3){
+    //position: absolute;
+    height: 2px;
+    background: #fff;
+    width: 80px;
+    margin-top: 40px;
+  }
+  width: 100px;
+  height: 100px;
+
+ .ham-menu-text {
+
+  top: 50px;
+  position: relative;
+  border: 1px solid blue;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .menu {
+      border: 1px solid pink;
+    }
+
+    .close {
+      border: 1px solid pink;
+      display: none;
+    }
   }
 }

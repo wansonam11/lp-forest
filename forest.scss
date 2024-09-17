@@ -107,8 +107,51 @@ header {
   justify-content: center;
 
   @media screen and (max-width: 1024px) {
-    right: 4vw;
-    display: block;
+    // right: 4vw;
+    // display: block;
+    width: 80px;
+    height: 80px;
+    span {
+      position: absolute;
+      height: 2px;
+      background: #fff;
+      width: 50px;
+      margin-bottom: 10px;
+    }
+    span:nth-last-child(2){
+      height: 2px;
+      background: #fff;
+      width: 50px;
+      margin-bottom: 30px;
+    }
+  
+    span:nth-last-child(3){
+      height: 2px;
+      background: #fff;
+      width: 50px;
+      margin-bottom: 50px;
+    }
+
+    .ham-menu-text {
+      top: 13px;
+      position: relative;
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-family: Noto Serif JP;
+          font-size: 16px;
+          font-weight: normal;
+        }
+    
+        .menu {
+        }
+    
+        .close {
+          display: none;
+        }
+    }
   }
 
   &__ham {
