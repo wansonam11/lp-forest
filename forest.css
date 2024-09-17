@@ -105,6 +105,21 @@ header .logo__img {
   align-items: center;
   justify-content: center;
 }
+.forest__nav__toggle .ham-menu-text {
+  display: none;
+}
+.forest__nav__toggle.on span:nth-of-type(1) {
+  transform: translateY(-4px) rotate(30deg);
+}
+.forest__nav__toggle.on span:nth-last-child(2) {
+  display: none;
+}
+.forest__nav__toggle.on span:nth-last-child(3) {
+  height: 2px;
+  width: 50px;
+  margin-bottom: 50px;
+  transform: translateY(15px) rotate(-29deg);
+}
 @media screen and (max-width: 1024px) {
   .forest__nav__toggle {
     width: 80px;
@@ -117,19 +132,23 @@ header .logo__img {
     width: 50px;
     margin-bottom: 10px;
   }
+  .forest__nav__toggle span:nth-of-type(1) {
+    transition: 0.5s;
+  }
   .forest__nav__toggle span:nth-last-child(2) {
     height: 2px;
-    background: #fff;
     width: 50px;
     margin-bottom: 30px;
+    transition: 1s;
   }
   .forest__nav__toggle span:nth-last-child(3) {
     height: 2px;
-    background: #fff;
     width: 50px;
     margin-bottom: 50px;
+    transition: 1s;
   }
   .forest__nav__toggle .ham-menu-text {
+    display: block;
     top: 13px;
     position: relative;
   }

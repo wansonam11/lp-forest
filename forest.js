@@ -1,10 +1,25 @@
 //hamburger bar
-
 function toggleMenu() {
   const navMenu = document.getElementsByClassName("forest__nav");
+  const crossBar = document.getElementsByClassName("forest__nav__toggle");
+
+  const menuText = document.querySelector(".menu");
+  const closeText = document.querySelector(".close");
+
 
   // navMenu.classList.add('show');
   for(var i = 0; i < navMenu.length; ++i) navMenu[i].classList.toggle('show');
+  for(var i = 0; i < crossBar.length; ++i) crossBar[i].classList.toggle('on');
+  
+
+
+    if (menuText.style.display === "none") {
+      menuText.style.display = "block";
+      closeText.style.display = "none";
+  } else {
+      menuText.style.display = "none";
+      closeText.style.display = "block";
+  }
 }
 
 function hamburger() {
@@ -14,33 +29,14 @@ function hamburger() {
    toggleMenu();
   });
 
+  // const crossBar = document.getElementsByClassName("forest__nav__toggle");
+  //   console.log(crossBar);
+
   const navLinkList = document.querySelectorAll(".forest__nav__list");
   navLinkList.forEach((el) => el.addEventListener("click", toggleMenu));
 }
 
 hamburger();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // slick Jquery
   $(function () {

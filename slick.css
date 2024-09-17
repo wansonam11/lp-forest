@@ -20,6 +20,7 @@ li {
 }
 
 .ham-menu {
+  transition: 0.5s;
   border: 1px solid red;
   width: 100px;
   height: 100px;
@@ -31,35 +32,23 @@ li {
   background: #fff;
   width: 80px;
 }
+.ham-menu span:nth-last-child(1) {
+  transform: translateY(41px) rotate(-29deg);
+  background: yellow;
+}
 .ham-menu span:nth-last-child(2) {
   height: 2px;
-  background: #fff;
+  background: orange;
   width: 80px;
   margin-top: 20px;
 }
 .ham-menu span:nth-last-child(3) {
   height: 2px;
-  background: #fff;
+  background: pink;
   width: 80px;
   margin-top: 40px;
-}
-.ham-menu .ham-menu-text {
-  top: 50px;
-  position: relative;
-  border: 1px solid blue;
-}
-.ham-menu .ham-menu-text p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-.ham-menu .ham-menu-text .menu {
-  border: 1px solid pink;
-}
-.ham-menu .ham-menu-text .close {
-  border: 1px solid pink;
-  display: none;
+  transition: 0.5s;
+  transform: translateX(4px) rotate(30deg);
 }
 
 /*# sourceMappingURL=slick.css.map */
